@@ -19,6 +19,7 @@
 ![F2Step1](https://user-images.githubusercontent.com/90036120/131993766-2fa04890-ae83-49e6-a451-6b3295574f0c.png)
 
 ++ 드래그하여 파일순서를 바꿀 수 있습니다.
+   현재 한국어 변역을 자동으로 지원합니다. 옵션사항이 아닙니다.
 
 추후 업데이트 예정
 1.Listview에 mp3파일 업로드시 가사 자동검색 후 저장
@@ -58,6 +59,7 @@ When you click the PutLyrics button in the lower right corner, the lyrics are pu
 ![F2Step1](https://user-images.githubusercontent.com/90036120/131993766-2fa04890-ae83-49e6-a451-6b3295574f0c.png)
 
 ++ You can drag files to change the order of the files.
+   It automatically supports Korean translation. This is not an option now.
 
 Will be updated later
 1. Automatically search and save lyrics when uploading mp3 files to Listview
