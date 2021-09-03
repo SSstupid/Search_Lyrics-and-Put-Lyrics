@@ -61,7 +61,7 @@ When you click the PutLyrics button in the lower right corner, the lyrics are pu
 
 Will be updated later
 1. Automatically search and save lyrics when uploading mp3 files to Listview
-2. Auto match lyrics with mp3 file (Lyrics are included in the order of current mp3 and lyrics file index values). ex) Lyrics.ItemIndex[0] 넣기 => mp3.ItemIndex[0])
+2. Auto match lyrics with mp3 file (Lyrics are included in the order of current mp3 and lyrics file index values). ex) Lyrics.ItemIndex[0] Put => mp3.ItemIndex[0])
 3. Open when you click an item in listview
 4.Exception Processing - Many exceptions are currently required.
 
