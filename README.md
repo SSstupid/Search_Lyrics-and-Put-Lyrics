@@ -72,6 +72,6 @@ Currently, I scratch the lyrics through Selenium. (I used it to practice.)
 There are many inconveniences such as crawl speed, exception handling, chrome and Cmd windows, so the crawling method may be changed later.   
 (The current attempt to hide the chrome window failed with an error.)   
 
-I hardcoded it. It's different from the program I first thought of.   
+I hard coded it. It's different from the program I first thought of.   
 I started production with this and that in mind, but it took too long.    
 So I'm going to start with a simple foundation and upgrade it step by step. (I was going to make a supercar, but I think I made a shabby car.)
