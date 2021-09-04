@@ -196,7 +196,10 @@ namespace LyricsSave
         private void SaveB_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrWhiteSpace(Path.Text) || Path.Text == "Please select a path")     // 예외처리 - 저장경로
-                Path.Text = (@"C:\Users\rlawo\Downloads");
+            {
+                string FindUser = Environment.GetFolderPath(System.Environment.SpecialFolder.UserProfile);
+                Path.Text = (FindUser + @"\Downloads");
+            }
             if(String.IsNullOrWhiteSpace(LyricsText.Text))      // 텍스트 예외처리
             {
                 MessageBox.Show("There are no lyrics to save.");
