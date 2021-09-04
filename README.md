@@ -1,4 +1,4 @@
-# Search_Lyrics-and-Put-Lyrics V1.0
+# Search_Lyrics and Put_Lyrics V1.0
 
 주요 기능  (★영문으로만 검색가능합니다. 다른 언어로 검색시 에러 발생.)
 1. 가사를 검색하고 저장할 수 있습니다.
