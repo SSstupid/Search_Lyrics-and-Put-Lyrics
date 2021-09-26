@@ -38,14 +38,14 @@
 
 
 
-#English
+# English
 
 Functions
 1. You can search and save the lyrics.
 2. You can put the lyrics into the Song
 
 
-#Function 1 => Lyrics Search and Save   
+# Function 1 => Lyrics Search and Save   
 In the text box, type the song you want to search for and click the Search button.    
 It automatically searches the lyrics and outputs them in the right-hand text box.     
 ![Step1](https://user-images.githubusercontent.com/90036120/131990580-58979912-e462-49f8-a2cb-8bc7b1308758.png)
@@ -53,7 +53,7 @@ It automatically searches the lyrics and outputs them in the right-hand text box
 Set the path and press the Save button to create a Txt file.  
 ![Step2](https://user-images.githubusercontent.com/90036120/131992771-f22d16b3-ab1b-4c81-a9e8-34e87e573632.png)
 
-#Function 2 => Put lyrics into music(mp3)    
+# Function 2 => Put lyrics into music(mp3)    
 Click Put_Lyrics in the upper left corner.    
 Drag the music file in the left box and upload the lyrics file in the right box.    
 When you click the PutLyrics button in the lower right corner, the lyrics are put into the music file.      
@@ -62,7 +62,7 @@ When you click the PutLyrics button in the lower right corner, the lyrics are pu
 ++ You can drag files to change the order of the files.   
    It automatically supports Korean translation. This is not an option now.   
 
-#Will be updated later                                                                                          
+# Will be updated later                                                                                          
 1. Automatically search and save lyrics when uploading mp3 files to Listview        
 2. Auto match lyrics with mp3 file (Lyrics are included in the order of current mp3 and lyrics file index values). ex) Lyrics.ItemIndex[0] Put => mp3.ItemIndex[0])   
 3. Open when you click an item in listview                                    
