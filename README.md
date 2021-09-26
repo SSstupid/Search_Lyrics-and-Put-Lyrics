@@ -3,13 +3,13 @@ You can search and save the lyrics.
 Then you can put the lyrics into the music.     
 
 # Update
-1.Organized the sauce.            
+#### 1.Organized the sauce.            
 * Make the sauce simple.  
 * Listview Event Integration Completed
 * Additional exception processing completed.              
         
-2.Improve UI.                       
-* You automatically recommend search terms when selecting music.        
+#### 2.Improve UI.                       
+* Recommend a search word when choosing a song.       
            
 ![afterUi](https://user-images.githubusercontent.com/90036120/134807628-b48fb4cb-36e9-4c23-9772-5f1021f00f28.JPG)
 
