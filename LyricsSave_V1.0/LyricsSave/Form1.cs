@@ -66,8 +66,6 @@ namespace LyricsSave
             }
             else
             {
-               /* ChromeOptions options = new ChromeOptions();
-                options.AddArgument("headless");*/      //Chrom창 숨길시 에러발생
 
                 IWebDriver driver = new ChromeDriver();
 
@@ -176,7 +174,6 @@ namespace LyricsSave
         private void PutLyrics(string SongPath, string LyricsPath)
         {
             var file = TagLib.File.Create(SongPath); // Change file path accordingly.
-
             String Lyrics = System.IO.File.ReadAllText(LyricsPath);
             file.Tag.Lyrics = Lyrics;
             file.Save();
