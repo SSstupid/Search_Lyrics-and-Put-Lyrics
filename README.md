@@ -14,11 +14,12 @@ Then you can put the lyrics into the mp3.
  * Change the location to look good.
 
 
-#### History
+### Update History
  1.Organized the sauce.  
  * Made the sauce simple.
- * Listview Event Integration Completed
- * Additional exception processing completed.   
+ * Listview Event Integration Completed (Functionalization of Listview)
+ * Additional exception processing completed.     
+ 
  2.Improve UI.
  * Recommend a search word when choosing a song.
 
