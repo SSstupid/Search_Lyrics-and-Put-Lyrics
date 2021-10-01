@@ -21,12 +21,8 @@ namespace LyricsSave
         public Form1()
         {
             InitializeComponent();
-            //ClientSize = new Size(700, 500);
-            panel1.Dock = DockStyle.Left;
-            panel1.Show();
-            Delete.Hide();
-            button1.Hide();
 
+            panel1.Dock = DockStyle.Left;
             List.ListViewSet(SongView);
         }
 
@@ -86,16 +82,11 @@ namespace LyricsSave
 
         private void LyricsPutIn(string SongPath)
         {
-            try
-            {
-                using (var file = TagLib.File.Create(SongPath))
-                { 
-                    String Lyrics = System.IO.File.ReadAllText(LyricsText.Text);
-                    file.Tag.Lyrics = Lyrics;
-                    file.Save();
-                }
-            }
-            catch (Exception e) { }
+                var file = TagLib.File.Create(SongPath);
+                String Lyrics = LyricsText.Text;
+                MessageBox.Show(SongPath + Lyrics);
+                file.Tag.Lyrics = Lyrics;
+                file.Save();
         }
 
         private void SearchB_Click(object sender, EventArgs e)
@@ -123,11 +114,7 @@ namespace LyricsSave
             }
            
             string x = DownloadPath.Text + @"\" + ArtistText.Text + TitleText.Text + ".txt";
-            try
-            {
-                File.WriteAllText(x, LyricsText.Text);
-            }
-            catch { }
+            File.WriteAllText(x, LyricsText.Text);
         }
 
         private void Path_Click(object sender, EventArgs e)
@@ -139,10 +126,12 @@ namespace LyricsSave
 
         private void PutLyrics(object sender, EventArgs e)
         {
+            MessageBox.Show("Step1 : " + SongView.Items[SongView.FocusedItem.Index].SubItems[0].Text);
             if(SongView.SelectedIndices.Count > 0)
             {
                 LyricsPutIn(SongView.Items[SongView.FocusedItem.Index].SubItems[0].Text);
             }
+            
         }
 
         private void Delete_Click(object sender, EventArgs e)

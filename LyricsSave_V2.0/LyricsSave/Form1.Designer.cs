@@ -59,7 +59,7 @@
             // 
             this.ArtistText.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.ArtistText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ArtistText.Location = new System.Drawing.Point(64, 17);
+            this.ArtistText.Location = new System.Drawing.Point(64, 19);
             this.ArtistText.Name = "ArtistText";
             this.ArtistText.Size = new System.Drawing.Size(113, 24);
             this.ArtistText.TabIndex = 0;
@@ -67,7 +67,7 @@
             // 
             // SearchB
             // 
-            this.SearchB.Location = new System.Drawing.Point(369, 17);
+            this.SearchB.Location = new System.Drawing.Point(369, 19);
             this.SearchB.Name = "SearchB";
             this.SearchB.Size = new System.Drawing.Size(89, 24);
             this.SearchB.TabIndex = 2;
@@ -78,12 +78,12 @@
             // LyricsText
             // 
             this.LyricsText.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.LyricsText.Location = new System.Drawing.Point(501, 95);
+            this.LyricsText.Location = new System.Drawing.Point(501, 101);
             this.LyricsText.Multiline = true;
             this.LyricsText.Name = "LyricsText";
             this.LyricsText.ReadOnly = true;
             this.LyricsText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.LyricsText.Size = new System.Drawing.Size(378, 312);
+            this.LyricsText.Size = new System.Drawing.Size(378, 317);
             this.LyricsText.TabIndex = 6;
             // 
             // SaveB
@@ -99,7 +99,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 44);
+            this.label1.Location = new System.Drawing.Point(11, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 17);
             this.label1.TabIndex = 4;
@@ -108,7 +108,7 @@
             // DownloadPath
             // 
             this.DownloadPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DownloadPath.Location = new System.Drawing.Point(11, 63);
+            this.DownloadPath.Location = new System.Drawing.Point(11, 64);
             this.DownloadPath.Multiline = true;
             this.DownloadPath.Name = "DownloadPath";
             this.DownloadPath.Size = new System.Drawing.Size(315, 33);
@@ -118,7 +118,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(790, 25);
+            this.button1.Location = new System.Drawing.Point(790, 17);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 24);
             this.button1.TabIndex = 4;
@@ -185,7 +185,7 @@
             // CheckBox1
             // 
             this.CheckBox1.AutoSize = true;
-            this.CheckBox1.Location = new System.Drawing.Point(501, 61);
+            this.CheckBox1.Location = new System.Drawing.Point(501, 57);
             this.CheckBox1.Name = "CheckBox1";
             this.CheckBox1.Size = new System.Drawing.Size(117, 21);
             this.CheckBox1.TabIndex = 15;
@@ -196,7 +196,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(498, 6);
+            this.label4.Location = new System.Drawing.Point(498, -2);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(48, 17);
             this.label4.TabIndex = 14;
@@ -205,7 +205,7 @@
             // TitleLa
             // 
             this.TitleLa.AutoSize = true;
-            this.TitleLa.Location = new System.Drawing.Point(782, 61);
+            this.TitleLa.Location = new System.Drawing.Point(782, 57);
             this.TitleLa.Name = "TitleLa";
             this.TitleLa.Size = new System.Drawing.Size(43, 17);
             this.TitleLa.TabIndex = 13;
@@ -214,7 +214,7 @@
             // ArtistLa
             // 
             this.ArtistLa.AutoSize = true;
-            this.ArtistLa.Location = new System.Drawing.Point(650, 61);
+            this.ArtistLa.Location = new System.Drawing.Point(650, 57);
             this.ArtistLa.Name = "ArtistLa";
             this.ArtistLa.Size = new System.Drawing.Size(48, 17);
             this.ArtistLa.TabIndex = 12;
@@ -223,7 +223,7 @@
             // LyLIstCombo
             // 
             this.LyLIstCombo.FormattingEnabled = true;
-            this.LyLIstCombo.Location = new System.Drawing.Point(501, 26);
+            this.LyLIstCombo.Location = new System.Drawing.Point(501, 18);
             this.LyLIstCombo.Name = "LyLIstCombo";
             this.LyLIstCombo.Size = new System.Drawing.Size(283, 24);
             this.LyLIstCombo.TabIndex = 3;
@@ -233,7 +233,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(185, 21);
+            this.label3.Location = new System.Drawing.Point(185, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 20);
             this.label3.TabIndex = 10;
@@ -243,7 +243,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(9, 21);
+            this.label2.Location = new System.Drawing.Point(9, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 20);
             this.label2.TabIndex = 9;
@@ -253,7 +253,7 @@
             // 
             this.TitleText.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.TitleText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleText.Location = new System.Drawing.Point(241, 17);
+            this.TitleText.Location = new System.Drawing.Point(241, 19);
             this.TitleText.Name = "TitleText";
             this.TitleText.Size = new System.Drawing.Size(113, 24);
             this.TitleText.TabIndex = 1;
