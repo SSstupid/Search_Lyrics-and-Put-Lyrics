@@ -23,6 +23,10 @@
 
 ++ 드래그하여 파일순서를 바꿀 수 있습니다.   
    현재 한국어 변역을 자동으로 지원합니다. 옵션사항이 아닙니다.
+   
+### 주의사항
+ * Selenum과 크롬드라이버 버전이 안맞을 경우 NuGet에서 Selenium.WebDriver.ChromeDriver을 확인해주세요.
+
 
 # 추후 업데이트 예정                                                        
 1.Listview에 mp3파일 업로드시 가사 자동검색 후 저장   
@@ -68,6 +72,9 @@ When you click the PutLyrics button in the lower right corner, the lyrics are pu
 
 ++ You can drag files to change the order of the files.   
    It automatically supports Korean translation. This is not an option now.   
+   
+### Notification
+  * If the Chrome and Selenium versions don't match, please check SeleniumWebDriver.ChromeDriver on NuGet.
 
 # Will be updated later                                                                                          
 1. Automatically search and save lyrics when uploading mp3 files to Listview        
