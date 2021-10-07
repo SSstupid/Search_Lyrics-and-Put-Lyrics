@@ -134,9 +134,14 @@ namespace LyricsSave
 
         private void Delete_Click(object sender, EventArgs e)
         {
+            DeleteLy();
+        }
+
+        public void DeleteLy()  //it will jump to ListViewFuntion-class
+        {
             if (SongView.SelectedItems.Count > 0)
             {
-                for (int i = SongView.SelectedItems.Count - 1; i >= 0; i--) 
+                for (int i = SongView.SelectedItems.Count - 1; i >= 0; i--)
                 {
                     SongView.SelectedItems[i].Remove();
                 }
@@ -220,6 +225,12 @@ namespace LyricsSave
             {
                 LyricsText.Text = LyMemory;
             }
+        }
+
+        private void SongView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == System.Windows.Forms.Keys.Delete)
+                DeleteLy();
         }
     }
 }
