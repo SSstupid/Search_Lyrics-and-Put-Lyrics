@@ -16,7 +16,7 @@ namespace LyricsSave
         ListViewFunction List = new ListViewFunction();
         List<LyricBasicInfo> LyricSearchList;
         ALSongLyric Bus = new ALSongLyric();
-        string LyMemory;
+        static string LyMemory;
 
         public Form1()
         {
@@ -84,7 +84,6 @@ namespace LyricsSave
         {
                 var file = TagLib.File.Create(SongPath);
                 String Lyrics = LyricsText.Text;
-                MessageBox.Show(SongPath + Lyrics);
                 file.Tag.Lyrics = Lyrics;
                 file.Save();
         }
@@ -126,7 +125,6 @@ namespace LyricsSave
 
         private void PutLyrics(object sender, EventArgs e)
         {
-            MessageBox.Show("Step1 : " + SongView.Items[SongView.FocusedItem.Index].SubItems[0].Text);
             if(SongView.SelectedIndices.Count > 0)
             {
                 LyricsPutIn(SongView.Items[SongView.FocusedItem.Index].SubItems[0].Text);
@@ -177,6 +175,7 @@ namespace LyricsSave
 
         private void LyLIstCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            LyricsText.Clear();
             if (LyricSearchList.Count > 0)
             {
                 LyricInfo LyricInfoSelected = Bus.GetLyricsFromID(LyricSearchList[LyLIstCombo.SelectedIndex].LyricID);
@@ -207,14 +206,14 @@ namespace LyricsSave
 
         private void CheckBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if(CheckBox1.Checked == true && !(String.IsNullOrWhiteSpace(LyricsText.Text)))
-            { 
-                string[] TimeRemove = LyricsText.Text.Split('\n');
+            if (CheckBox1.Checked == true && !(String.IsNullOrWhiteSpace(LyricsText.Text)))
+            {
                 LyricsText.Clear();
-                foreach (string a1 in TimeRemove)
+                string[] TimeRemove = LyMemory.Split('\n');
+                foreach (string Text in TimeRemove)
                 {
-                    if (a1.Length > 9)
-                        LyricsText.Text += a1.Substring(10) + "\n";
+                    if (Text.Length > 9)
+                        LyricsText.Text += Text.Substring(10) + "\n";
                 }
             }
             else if(CheckBox1.Checked == false && !(String.IsNullOrWhiteSpace(LyricsText.Text)))
