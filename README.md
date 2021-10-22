@@ -38,7 +38,7 @@ Then you can put the lyrics into the mp3.
 <img src=https://user-images.githubusercontent.com/90036120/135643430-62daece9-44d0-45f4-8adb-8d28d01c653d.JPG width="600" height="380"/>
     
 
-### Additional modifications.
+### Patch Notes
  * 07/10/2021 (10/07/2021_Kor) RemoveTime, PutLyrics-Button
 
 
