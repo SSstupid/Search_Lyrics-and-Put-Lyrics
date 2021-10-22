@@ -39,7 +39,7 @@ Then you can put the lyrics into the mp3.
     
 
 ### Patch Notes
- * 07/10/2021 (10/07/2021_Kor) RemoveTime, PutLyrics-Button
+ * 07/10/2021 (2021/10/07_Kor) fix to RemoveTime, PutLyrics-Button
 
 
 #### Reference link : https://m.blog.naver.com/jjy3742/22156146758
