@@ -15,7 +15,7 @@ Then you can put the lyrics into the mp3.
 
 
 ### Update History
- 1.Organized the sauce.  
+ 1.Organized the source.  
  * Made the sauce simple.
  * Listview Event Integration Completed (Functionalization of Listview)
  * Additional exception processing completed.     
