@@ -11,12 +11,12 @@ Then you can put the lyrics into the mp3.
 #### 2.UI changed.
  * MenuStrip : PutLyrics, SearchLyrics ==> Contact
  * Add some Controls(ComboBox, CheckBox...)
- * Change the location to look good.
+ * Change the position to look good.
 
 
 ### Update History
  1.Organized the source.  
- * Made the sauce simple.
+ * Made the source simple.
  * Listview Event Integration Completed (Functionalization of Listview)
  * Additional exception processing completed.     
  
