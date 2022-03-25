@@ -21,7 +21,7 @@ Then you can put the lyrics into the mp3.
  * Additional exception processing completed.     
  
  2.Improve UI.
- * Recommend a search word when choosing a song.
+ * Recommend a search word when you choosing a song.
 
 #### V1.0 Search and Put Screen
 .<img src=https://user-images.githubusercontent.com/90036120/135824372-55e84976-fc75-4931-826d-f4ce77328f83.JPG width="470" height="370"/>.
