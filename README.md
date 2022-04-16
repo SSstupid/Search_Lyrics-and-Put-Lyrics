@@ -1,7 +1,7 @@
 # LyricsSave_V2.0
 ### Main function.
 You can search and save the lyrics.         
-Then you can put the lyrics into the mp3.
+Then you can put the lyrics in the mp3.
 
 # Patch Notes
 #### 1.Changing crawling.
