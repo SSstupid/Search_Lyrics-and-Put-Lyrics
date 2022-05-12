@@ -76,7 +76,7 @@ When you click the PutLyrics button in the lower right corner, the lyrics are pu
 ### Notification
   * If the Chrome and Selenium versions don't match, please check SeleniumWebDriver.ChromeDriver on NuGet.
 
-# Will be updated later                                                                                          
+# Will be updat later                                                                                          
 1. Automatically search and save lyrics when uploading mp3 files to Listview        
 2. Auto match lyrics with mp3 file (Lyrics are included in the order of current mp3 and lyrics file index values). ex) Lyrics.ItemIndex[0] Put => mp3.ItemIndex[0])   
 3. Open when you click an item in listview                                    
