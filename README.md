@@ -5,8 +5,8 @@ Then you can put the lyrics in the mp3.
 
 # Patch Notes
 #### 1.Changing crawling.
- * Way : Selenium => Https
- * Form : Google => ESTsoft
+ * Selenium => Https
+ * Google   => ESTsoft
 
 #### 2.UI changed.
  * MenuStrip : PutLyrics, SearchLyrics ==> Contact
