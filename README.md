@@ -39,7 +39,8 @@ Then you can put the lyrics in the mp3.
     
 
 ### Patch Notes
- * 07/10/2021 (2021/10/07_Kor) fix to RemoveTime, PutLyrics-Button
+ * 07/10/2021 (2021/10/07_Kor) fix : RemoveTime, PutLyrics-Button
+ * 13/05/2022 (2021/10/07_Kor) fix : get lyrics from a file(Mp3)
 
 --------------------------------
 V1.0에서는 Selenum을 사용했습니다.(Selenum 테스트용)    
@@ -52,3 +53,5 @@ Https로 요청해서 가사를 받아오고 가사 목록이 콤보박스에 �
 (Selenum처럼 가사를 한개 받아오는데 반면에)    
 추가된 여러 아이템을 확인하고 선택 할 수 있습니다.   
 (속도 및 정확도 개선)    
+
+WPF로 전환중입니다.
