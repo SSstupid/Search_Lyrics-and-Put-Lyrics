@@ -159,6 +159,7 @@ namespace LyricsSave
                     var file = TagLib.File.Create(SongPath);
                     ArtistText.Text = (file.Tag.FirstPerformer);
                     TitleText.Text = (file.Tag.Title);
+                    LyricsText.Text = (file.Tag.Lyrics);
                 }
             }
         }
