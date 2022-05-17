@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "RpzyAzi68CdbIE3u7/NuXxqv2k3jEHoJR2dCh4JA1/ekTomoIPiQaOAU2lqfd3MtZuzOAHWiRD2ZBKrWf+dhXw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\rlawo\\source\\repos\\ManageLyrics\\ManageLyrics\\ManageLyrics.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\rlawo\\.nuget\\packages\\fody\\6.5.1\\fody.6.5.1.nupkg.sha512",
+    "C:\\Users\\rlawo\\.nuget\\packages\\gongsolutions.wpf.dragdrop\\1.0.0.1\\gongsolutions.wpf.dragdrop.1.0.0.1.nupkg.sha512",
+    "C:\\Users\\rlawo\\.nuget\\packages\\jetbrains.annotations\\2021.1.0-eap01\\jetbrains.annotations.2021.1.0-eap01.nupkg.sha512",
+    "C:\\Users\\rlawo\\.nuget\\packages\\propertychanged.fody\\3.4.0\\propertychanged.fody.3.4.0.nupkg.sha512",
+    "C:\\Users\\rlawo\\.nuget\\packages\\system.windows.interactivity.wpf\\2.0.20525\\system.windows.interactivity.wpf.2.0.20525.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "프로젝트 대상 프레임워크 'net6.0-windows7.0' 대신 '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8'을(를) 사용하여 패키지 'System.Windows.Interactivity.WPF 2.0.20525'을(를) 복원했습니다. 이 패키지는 프로젝트와 완벽하게 호환되지 않을 수 있습니다.",
+      "libraryId": "System.Windows.Interactivity.WPF",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

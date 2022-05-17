@@ -1,0 +1,106 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ManageLyrics/1.0.0": {
+        "dependencies": {
+          "GongSolutions.WPF.DragDrop": "1.0.0.1",
+          "PropertyChanged.Fody": "3.4.0",
+          "System.Windows.Interactivity.WPF": "2.0.20525"
+        },
+        "runtime": {
+          "ManageLyrics.dll": {}
+        }
+      },
+      "Fody/6.5.1": {},
+      "GongSolutions.WPF.DragDrop/1.0.0.1": {
+        "dependencies": {
+          "JetBrains.Annotations": "2021.1.0-eap01"
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/GongSolutions.WPF.DragDrop.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "JetBrains.Annotations/2021.1.0-eap01": {
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "assemblyVersion": "2021.1.0.0",
+            "fileVersion": "2021.1.0.0"
+          }
+        }
+      },
+      "PropertyChanged.Fody/3.4.0": {
+        "dependencies": {
+          "Fody": "6.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/PropertyChanged.dll": {
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
+          }
+        }
+      },
+      "System.Windows.Interactivity.WPF/2.0.20525": {
+        "runtime": {
+          "lib/net40/Microsoft.Expression.Interactions.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "2.0.20525.0"
+          },
+          "lib/net40/System.Windows.Interactivity.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "2.0.20525.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ManageLyrics/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Fody/6.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DEw9rPG5vrpaK4vPPze0f4q6Zd0mfzjGNKy49nrmINkftIHpkyf8KH+uC/qF8y6v1askPWu9NbJS9bkmN5wXaA==",
+      "path": "fody/6.5.1",
+      "hashPath": "fody.6.5.1.nupkg.sha512"
+    },
+    "GongSolutions.WPF.DragDrop/1.0.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FeOrEYV6vy8i46upYPKCptlSlSYFz/SAFyK3qh7Y9+i6ztbGqZldpBMvPY1AD6/VOz+clE74aIW17N4OpQtRWA==",
+      "path": "gongsolutions.wpf.dragdrop/1.0.0.1",
+      "hashPath": "gongsolutions.wpf.dragdrop.1.0.0.1.nupkg.sha512"
+    },
+    "JetBrains.Annotations/2021.1.0-eap01": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WeuVt4sLRLT/ROy7gBUC0MJmIW/kT1N+5aGXZFHmzbTQivJpAcwXhat4Y2Km6WqwiBLTQeL7J5k23tsjG+2aWA==",
+      "path": "jetbrains.annotations/2021.1.0-eap01",
+      "hashPath": "jetbrains.annotations.2021.1.0-eap01.nupkg.sha512"
+    },
+    "PropertyChanged.Fody/3.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IAZyq0uolKo2WYm4mjx+q7A8fSGFT0x2e1s3y+ODn4JI0kqTDoo9GF2tdaypUzRFJZfdMxfC5HZW9QzdJLtOnA==",
+      "path": "propertychanged.fody/3.4.0",
+      "hashPath": "propertychanged.fody.3.4.0.nupkg.sha512"
+    },
+    "System.Windows.Interactivity.WPF/2.0.20525": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0r+Le4E7hCm4zToUvBzjSUyTcuU3rFeoPa7JyTdWIzR/F7wH6+O/pWkjHIG40hIA0z1wvRdZayvoizA4wcK1dg==",
+      "path": "system.windows.interactivity.wpf/2.0.20525",
+      "hashPath": "system.windows.interactivity.wpf.2.0.20525.nupkg.sha512"
+    }
+  }
+}
