@@ -43,9 +43,9 @@
                                 <ColumnDefinition />
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Row="0" Grid.RowSpan="2">
-                                <Grid Width="50" Height="50">
+                                <Grid Width="100" Height="100">
                                     <Grid.Background>
-                                        <ImageBrush ImageSource="{Binding ff}" />
+                                        <ImageBrush ImageSource="{Binding image1}" />
                                     </Grid.Background>
                                 </Grid>
                             </StackPanel>
