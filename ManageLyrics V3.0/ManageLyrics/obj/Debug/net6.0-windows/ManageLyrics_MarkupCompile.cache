@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\App.xaml
-91153024040
+91587571465
 
-151341334926
-199-1612266986
-MainWindow.xaml;Style\Buttons.xaml;Style\Colors.xaml;Style\Fonts.xaml;Style\ListViews.xaml;Themes\ColourfulDarkTheme.xaml;Themes\ColourfulLightTheme.xaml;Themes\DarkTheme.xaml;Themes\LightTheme.xaml;
+131779319648
+201-758445323
+MainWindow.xaml;Style\Colors.xaml;Style\Fonts.xaml;Style\ListViews.xaml;Style\Tools.xaml;Themes\ColourfulDarkTheme.xaml;Themes\ColourfulLightTheme.xaml;Themes\DarkTheme.xaml;Themes\LightTheme.xaml;
 
 False
 

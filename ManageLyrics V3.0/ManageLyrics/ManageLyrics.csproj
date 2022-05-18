@@ -10,23 +10,21 @@
   <ItemGroup>
     <None Remove="Fonts\fontawesome-webfont.svg" />
     <None Remove="Fonts\fontawesome-webfont.ttf" />
-    <None Remove="Img\logo-small.png" />
-    <None Remove="Img\TestImg.JPG" />
+    <None Remove="Img\vs.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="GongSolutions.WPF.DragDrop" Version="1.0.0.1" />
     <PackageReference Include="PropertyChanged.Fody" Version="3.4.0" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
     <PackageReference Include="System.Windows.Interactivity.WPF" Version="2.0.20525" />
+    <PackageReference Include="TagLibSharp" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Fonts\fontawesome-webfont.svg" />
     <Resource Include="Fonts\fontawesome-webfont.ttf" />
-    <Resource Include="Img\logo-small.png" />
-    <Resource Include="Img\TestImg.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    <Resource Include="Img\vs.png" />
   </ItemGroup>
 
   <ItemGroup>

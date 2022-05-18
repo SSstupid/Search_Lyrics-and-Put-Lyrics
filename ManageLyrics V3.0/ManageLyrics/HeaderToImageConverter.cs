@@ -3,6 +3,7 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
 using System.IO;
+using System.Drawing;
 
 namespace ManageLyrics
 {
@@ -16,9 +17,8 @@ namespace ManageLyrics
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return new BitmapImage(new Uri($"pack://application:,,,/Img/logo-small.png"));
+            return new BitmapImage(new Uri($"pack://application:,,,/Img/vs.png"));
         }
-
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();

@@ -1,14 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "RpzyAzi68CdbIE3u7/NuXxqv2k3jEHoJR2dCh4JA1/ekTomoIPiQaOAU2lqfd3MtZuzOAHWiRD2ZBKrWf+dhXw==",
+  "dgSpecHash": "acFCnCW+6LNMJQvZOVOMwBh/c+2sW+fYgEP0IViXISdVMzJoFijXAO00A4dr7ABR2ruTn2dq28/BPY0avZelwg==",
   "success": true,
   "projectFilePath": "C:\\Users\\rlawo\\source\\repos\\ManageLyrics\\ManageLyrics\\ManageLyrics.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rlawo\\.nuget\\packages\\fody\\6.5.1\\fody.6.5.1.nupkg.sha512",
     "C:\\Users\\rlawo\\.nuget\\packages\\gongsolutions.wpf.dragdrop\\1.0.0.1\\gongsolutions.wpf.dragdrop.1.0.0.1.nupkg.sha512",
     "C:\\Users\\rlawo\\.nuget\\packages\\jetbrains.annotations\\2021.1.0-eap01\\jetbrains.annotations.2021.1.0-eap01.nupkg.sha512",
+    "C:\\Users\\rlawo\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\rlawo\\.nuget\\packages\\propertychanged.fody\\3.4.0\\propertychanged.fody.3.4.0.nupkg.sha512",
-    "C:\\Users\\rlawo\\.nuget\\packages\\system.windows.interactivity.wpf\\2.0.20525\\system.windows.interactivity.wpf.2.0.20525.nupkg.sha512"
+    "C:\\Users\\rlawo\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\rlawo\\.nuget\\packages\\system.windows.interactivity.wpf\\2.0.20525\\system.windows.interactivity.wpf.2.0.20525.nupkg.sha512",
+    "C:\\Users\\rlawo\\.nuget\\packages\\taglibsharp\\2.2.0\\taglibsharp.2.2.0.nupkg.sha512"
   ],
   "logs": [
     {

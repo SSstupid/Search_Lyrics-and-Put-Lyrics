@@ -55,9 +55,17 @@
               "target": "Package",
               "version": "[3.4.0, )"
             },
+            "System.Drawing.Common": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "System.Windows.Interactivity.WPF": {
               "target": "Package",
               "version": "[2.0.20525, )"
+            },
+            "TagLibSharp": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             }
           },
           "imports": [

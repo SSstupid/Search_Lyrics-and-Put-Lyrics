@@ -13,5 +13,6 @@ namespace ManageLyrics
         public string Artist { get; set; }
         public string Title { get; set; }
         public string Lyrics { get; set; }
+        public System.Windows.Media.ImageSource WindowImages { get; set; }
     }
 }
