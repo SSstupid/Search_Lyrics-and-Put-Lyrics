@@ -1,16 +1,12 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-
 namespace ManageLyrics
 {
     public class ListViewViewModel : BaseViewModel
     {
         public List<ListModel> SongList { get; set; }
+        //ItemImage AlbumImg = new ItemImage();
+        
 
         public void ListDragEnter(object sender, DragEventArgs e)
         {
@@ -30,45 +26,43 @@ namespace ManageLyrics
             foreach (string fileName in path)
             {
                 var SongFile = TagLib.File.Create(fileName);
-                filesData.Add(new ListModel() { files = fileName, Artist = SongFile.Tag.FirstPerformer, WindowImages = TestImageMetaData(fileName) });
+                filesData.Add(new ListModel() 
+                { 
+                    Path = fileName, 
+                    FileName = GetFileFolderName(fileName), 
+                    Artist = SongFile.Tag.FirstPerformer ?? "NoArtist", 
+                    Title = SongFile.Tag.Title ?? "NoTitle", 
+                });
             }
             SongList = filesData;
         }
+        #region Helpers
 
-        public ImageSource TestImageMetaData(string filename)
+        /// <summary>
+        /// Find the file or folder name from a full path
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static string GetFileFolderName(string path)
         {
-            TagLib.File tagFile = TagLib.File.Create(filename);
-            ImageSource imageSource;
+            // If we have no path, return empty
+            if (string.IsNullOrEmpty(path))
+                return string.Empty;
 
-            if (tagFile.Tag.Pictures.Length == 0) // 여러 아이템 동시 추가시 Length 확인할 것
-            {
-                imageSource = getIcon(filename);
-            }
-            else
-            {
-                var imageBit= new BitmapImage();
+            // Make all slashes back slashes
+            var normalizedPath = path.Replace('/', '\\');
 
-                MemoryStream ms = new MemoryStream(tagFile.Tag.Pictures[0].Data.Data);
-                imageBit.BeginInit();
-                imageBit.StreamSource = ms;
-                imageBit.EndInit();
+            //Find the last backlash in the path
+            var lastIndex = normalizedPath.LastIndexOf('\\');
 
-                imageSource = imageBit;
-            }
-            return imageSource;
+            // If we don`t find a backslash, return the path itself
+            if (lastIndex <= 0)
+                return path;
+
+            // Return the name after the last back slash
+            return path.Substring(lastIndex + 1);
         }
 
-        public ImageSource getIcon(string filename)
-        {
-            System.Windows.Media.ImageSource icon;
-            using (System.Drawing.Icon sysicon = System.Drawing.Icon.ExtractAssociatedIcon(filename))
-            {
-                icon = System.Windows.Interop.Imaging.CreateBitmapSourceFromHIcon(
-                            sysicon.Handle,
-                            System.Windows.Int32Rect.Empty,
-                            System.Windows.Media.Imaging.BitmapSizeOptions.FromEmptyOptions());
-            }
-            return icon;
-        }
+        #endregion
     }
 }
