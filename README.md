@@ -64,12 +64,18 @@ Winform Vs WPF에 대한 말이 많지만
 * 14/05/2022 초기 디자인 완료         
 * 14/05/2022 ListView -dragdrop 구현완료.          
     현재 이미지컨버터 구현중 (파일앨범에 저장된 사진을 받을 예정, 이미지가 없을 시 윈도우 기본 이미지 사용 )       
-* 18/05/2022 ListView Template 추가 시 테마 Template와 충돌로 이미지 랜더링 실패 현상 발견      
-  ![image](https://user-images.githubusercontent.com/90036120/168966070-c1afc4b0-f86b-4516-83fc-0f5b582bf5a8.png)  ![image](https://user-images.githubusercontent.com/90036120/168965992-4845293c-089b-40a4-ab9f-b3a63ef61798.png)      
-                                        Before                                 After       
-
-  => 현재 해결완료 참조 : [링크](https://forum.dotnetdev.kr/t/wpf-listview-template-template/3599)      
- 
+* 18/05/2022 ListView Template 추가 시 테마 Template와 충돌로 이미지 랜더링 실패 현상 발견       
+        
+  <img src=https://user-images.githubusercontent.com/90036120/168966070-c1afc4b0-f86b-4516-83fc-0f5b582bf5a8.png width="300" height="300">
+  <img src=https://user-images.githubusercontent.com/90036120/168965992-4845293c-089b-40a4-ab9f-b3a63ef61798.png width="300" height="300">          
+               Before                                     After                
+     
+  => 현재 해결완료 참조 : [링크](https://forum.dotnetdev.kr/t/wpf-listview-template-template/3599)         
+    
+* 19/05/2022 ListView Template (디자인)변경 => 가수, 노래제목 표시, 앨범 이미지를 TagLib를 이용하여 바로 가져오는 것이 아닌
+  Converter를 거쳐 String Path에서 이미지로 변환 후 받아옴, 앨범 이미지가 없을 시 윈도우 기본 아이콘을 가져옴.     
+           
+<img src=https://user-images.githubusercontent.com/90036120/169240811-ba1d7080-e446-4be3-8f3a-0849b7892ebe.png width="600" height="300">     
 
 ------------------
 깃허브를 개인적으로 사용 중이라 그동안 공유 => 업로드, 다운로드 보다는 편의성의 이미를 두었습니다.    
