@@ -68,7 +68,7 @@ Winform Vs WPF에 대한 말이 많지만
         
   <img src=https://user-images.githubusercontent.com/90036120/168966070-c1afc4b0-f86b-4516-83fc-0f5b582bf5a8.png width="300" height="300">
   <img src=https://user-images.githubusercontent.com/90036120/168965992-4845293c-089b-40a4-ab9f-b3a63ef61798.png width="300" height="300">          
-               Before                                     After                
+               Before                           After                
      
   => 현재 해결완료 참조 : [링크](https://forum.dotnetdev.kr/t/wpf-listview-template-template/3599)         
     
