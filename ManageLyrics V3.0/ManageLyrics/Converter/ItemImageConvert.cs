@@ -31,11 +31,12 @@ public class ItemImageConvert : IValueConverter
     {
         ImageSource imageSource;
 
-        TagLib.File tagFile = TagLib.File.Create(filename);
+        try { TagLib.File tagFile = TagLib.File.Create(filename); if (tagFile.Tag.Pictures.Length == 0) { imageSource = GetIcon(filename); }
+            else { imageSource = GetAlbumImage(filename, tagFile); }
+        }
+        catch { imageSource = null; }   
 
         // Album is null ?
-        if (tagFile.Tag.Pictures.Length == 0) { imageSource = GetIcon(filename); }
-        else { imageSource = GetAlbumImage(filename, tagFile); }
 
         return imageSource;
     }

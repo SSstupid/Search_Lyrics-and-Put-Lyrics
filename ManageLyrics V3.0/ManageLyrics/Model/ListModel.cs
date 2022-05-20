@@ -5,6 +5,8 @@
     public string Artist { get; set; }
     public string Title { get; set; }
     public string Lyrics { get; set; }
+    public string? TextBoxArtist { get; set; }
+    public string? TextBoxTitle { get; set; }
 
-   // public System.Windows.Media.ImageSource WindowImages { get; set; }
+    // public System.Windows.Media.ImageSource WindowImages { get; set; }
 }

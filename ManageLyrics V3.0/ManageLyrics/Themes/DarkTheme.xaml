@@ -959,7 +959,7 @@
         </Style.Triggers>
     </Style>
 
-    <Style TargetType="{x:Type ComboBoxItem}">
+    <Style TargetType="{x:Type ComboBoxItem}" x:Key="3">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,1" />
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
@@ -4576,7 +4576,7 @@
     <!--  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-  -->
 
     <!--  Textbox  -->
-    <Style TargetType="{x:Type TextBox}">
+    <Style x:Key="DarkTextBox" TargetType="{x:Type TextBox}">
         <Setter Property="Background" Value="{StaticResource ContainerBackground}" />
         <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}" />
         <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}" />

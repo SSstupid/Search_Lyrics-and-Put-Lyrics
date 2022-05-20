@@ -37,5 +37,5 @@ C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\M
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\Style\ListViews.baml
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\bin\Debug\net6.0-windows\Microsoft.Expression.Interactions.dll
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\bin\Debug\net6.0-windows\System.Windows.Interactivity.dll
-C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\Style\Tools.baml
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\bin\Debug\net6.0-windows\TagLibSharp.dll
+C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\Style\ToolBox.baml

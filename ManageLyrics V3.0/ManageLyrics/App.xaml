@@ -11,7 +11,7 @@
                 <ResourceDictionary Source="/Themes/DarkTheme.xaml" />
                 <ResourceDictionary Source="/Style/Colors.xaml" />
                 <ResourceDictionary Source="/Style/Fonts.xaml" />
-                <ResourceDictionary Source="/Style/Tools.xaml" />
+                <ResourceDictionary Source="/Style/ToolBox.xaml" />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
