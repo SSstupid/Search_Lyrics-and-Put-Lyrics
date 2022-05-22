@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Windows;
+﻿using System.Windows;
 
 namespace ManageLyrics
 {
@@ -8,6 +7,8 @@ namespace ManageLyrics
     /// </summary>
     public partial class MainWindow : Window
     {
+        ALSongLyric Bus = new ALSongLyric();
+
         public MainWindow()
         {
             InitializeComponent();

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\rlawo\Documents\GitHub\Search_Lyrics-and-Put-Lyrics\ManageLyrics V3.0\ManageLyrics\obj\Debug\net6.0-windows\
+C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\
 ManageLyrics
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\rlawo\Documents\GitHub\Search_Lyrics-and-Put-Lyrics\ManageLyrics V3.0\ManageLyrics\App.xaml
-11182357872
+C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\App.xaml
+91762814831
 
-23999855138
+20-2123435361
 201-758445323
-MainWindow.xaml;Style\Buttons.xaml;Style\Colors.xaml;Style\Fonts.xaml;Style\ListViews.xaml;Style\ToolBox.xaml;Style\Tools.xaml;Themes\ColourfulDarkTheme.xaml;Themes\ColourfulLightTheme.xaml;Themes\DarkTheme.xaml;Themes\LightTheme.xaml;
+MainWindow.xaml;Style\Colors.xaml;Style\Fonts.xaml;Style\ListViews.xaml;Style\ToolBox.xaml;Themes\ColourfulDarkTheme.xaml;Themes\ColourfulLightTheme.xaml;Themes\DarkTheme.xaml;Themes\LightTheme.xaml;
 
-False
+True
 

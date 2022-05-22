@@ -21,7 +21,7 @@ namespace ManageLyrics
             XmlDocument xmlDocument = RequestLyList(A + B, D, aTitle, aArtist);
             List<LyricBasicInfo> lyricBasicInfoList = new List<LyricBasicInfo>();
             try 
-            { 
+            {
                 for (int i = 0; i < xmlDocument.ChildNodes[1].ChildNodes[0].ChildNodes[0].ChildNodes[0].ChildNodes.Count; ++i)
                     lyricBasicInfoList.Add(new LyricBasicInfo()
                     {
@@ -30,7 +30,6 @@ namespace ManageLyrics
                         Artist = xmlDocument.ChildNodes[1].ChildNodes[0].ChildNodes[0].ChildNodes[0].ChildNodes[i].ChildNodes[2].ChildNodes[0].InnerText,
                         Album = xmlDocument.ChildNodes[1].ChildNodes[0].ChildNodes[0].ChildNodes[0].ChildNodes[i].ChildNodes[3].ChildNodes[0].InnerText
                     });
-            
             }
             catch(NullReferenceException e)
             {
@@ -39,12 +38,11 @@ namespace ManageLyrics
             return lyricBasicInfoList;
         }
 
-        public XmlDocument RequestLyList(string A_0, string A_1, string Artist = "", string Title = "")
+        public XmlDocument RequestLyList(string A_0, string A_1, string Artist, string Title)
         {
-            XmlDocument xmlDocument1 = (XmlDocument)null;
+            XmlDocument? xmlDocument1 = null;
             string str = A_0.Replace("^^", "\"").Replace("TITLE", Artist).Replace("ARTIST", Title).Replace("ENCDATA", EncData);
-            WebRequest webRequest = (WebRequest)null;
-            WebResponse webResponse = (WebResponse)null;
+            WebRequest webRequest;
             try
             {
                 webRequest = WebRequest.Create(A_1);
@@ -58,14 +56,12 @@ namespace ManageLyrics
                 xmlDocument2.Load(responseStream);
                 xmlDocument1 = xmlDocument2;
             }
-            finally
-            {
-                webRequest?.GetRequestStream().Close();
-                webResponse?.GetResponseStream().Close();
-            }
+            catch { }
             return xmlDocument1;
         }
+        #region No using this code
 
+       
         public LyricInfo GetLyricsFromID(int LyricID)
         {
             XmlDocument xmlDocument1 = RequestLyric((A + C.Replace("LYRICID", Convert.ToString(LyricID))).Replace("^^", "'"), D);
@@ -92,8 +88,8 @@ namespace ManageLyrics
             }
             finally
             {
-                webRequest?.GetRequestStream().Close();
-                webResponse?.GetResponseStream().Close();
+                /*webRequest?.GetRequestStream().Close();
+                webResponse?.GetResponseStream().Close();*/
             }
             return xmlDocument1;
         }
@@ -146,5 +142,8 @@ namespace ManageLyrics
             lyricInfo.ModifierComment = childNodes[0].ChildNodes[18].InnerText;
             return lyricInfo;
         }
+     
+
+        #endregion
     }
 }
