@@ -1994,11 +1994,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rlawo\\source\\repos\\ManageLyrics\\ManageLyrics\\ManageLyrics.csproj",
+      "projectUniqueName": "C:\\Users\\rlawo\\Documents\\GitHub\\Search_Lyrics-and-Put-Lyrics\\ManageLyrics V3.0\\ManageLyrics\\ManageLyrics.csproj",
       "projectName": "ManageLyrics",
-      "projectPath": "C:\\Users\\rlawo\\source\\repos\\ManageLyrics\\ManageLyrics\\ManageLyrics.csproj",
+      "projectPath": "C:\\Users\\rlawo\\Documents\\GitHub\\Search_Lyrics-and-Put-Lyrics\\ManageLyrics V3.0\\ManageLyrics\\ManageLyrics.csproj",
       "packagesPath": "C:\\Users\\rlawo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rlawo\\source\\repos\\ManageLyrics\\ManageLyrics\\obj\\",
+      "outputPath": "C:\\Users\\rlawo\\Documents\\GitHub\\Search_Lyrics-and-Put-Lyrics\\ManageLyrics V3.0\\ManageLyrics\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

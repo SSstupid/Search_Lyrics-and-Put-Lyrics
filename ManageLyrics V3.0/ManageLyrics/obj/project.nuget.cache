@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rIn3aEopInZGfZCF52bKOLYtX2Irq1wwKqnB8oohhYKQpVCkQiudNrPKBkfBd+Zrh5ZTcNWBAl3GTEvg9GZgvA==",
+  "dgSpecHash": "QQ94dxt18zrOGH3XasVsxhi4FpevRFOIGX/+g+JO5XMkHKNqPh4du1z3CDAm3mo9sHtTewfgdxvYeRsg5AZrPQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rlawo\\source\\repos\\ManageLyrics\\ManageLyrics\\ManageLyrics.csproj",
+  "projectFilePath": "C:\\Users\\rlawo\\Documents\\GitHub\\Search_Lyrics-and-Put-Lyrics\\ManageLyrics V3.0\\ManageLyrics\\ManageLyrics.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rlawo\\.nuget\\packages\\fody\\6.5.1\\fody.6.5.1.nupkg.sha512",
     "C:\\Users\\rlawo\\.nuget\\packages\\gongsolutions.wpf.dragdrop\\1.0.0.1\\gongsolutions.wpf.dragdrop.1.0.0.1.nupkg.sha512",
