@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace TestListTemplate
 {
@@ -24,7 +25,7 @@ namespace TestListTemplate
         {
             InitializeComponent();
             
-            DataContext = new MainViewModel();
+            DataContext = new TestComboViewModel();
         }
     }
 }

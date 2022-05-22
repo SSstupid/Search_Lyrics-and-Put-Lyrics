@@ -7,62 +7,62 @@
         Title="MainWindow"
         Width="800"
         Height="450"
+        Style="{DynamicResource CustomWindowStyle}"
         mc:Ignorable="d">
-        <!--Style="{DynamicResource CustomWindowStyle}" -->
-    <Border>
 
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
+    <Border>
+        <Grid >
+            <Grid.RowDefinitions  >
+                <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-
-            <StackPanel Grid.Row="0" Orientation="Horizontal">
-                <Button Content="Contact" />
-                <Button Margin="5,0,0,0" />
-            </StackPanel>
-            <ListView Grid.Row="1"
-                      Grid.Column="0"
-                      Margin="5,5"
-                      AllowDrop="True"
-                      ItemsSource="{Binding Files}">
+            
+        
+            <ListView ItemsSource="{Binding}" Grid.Row="0">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
                             <StackPanel Grid.Row="0" Grid.RowSpan="2">
-                                <Grid Width="100" Height="100">
+                                <Grid Width="50" Height="50">
                                     <Grid.Background>
-                                        <ImageBrush ImageSource="{Binding image1}" />
+                                        <ImageBrush ImageSource="/TestListTemplate;component/Images/vs.png" />
                                     </Grid.Background>
                                 </Grid>
                             </StackPanel>
-                            <TextBlock Grid.Row="0"
-                                       Grid.Column="1"
-                                       VerticalAlignment="Bottom"
-                                       Text="{Binding FileName}" />
-                            <TextBlock Grid.Row="1"
-                                       Grid.Column="1"
-                                       VerticalAlignment="Top"
-                                       Text="{Binding FullPath}" />
+                            <TextBlock Text="{Binding FileName}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Bottom"/>
+                            <TextBlock Text="{Binding FullPath}" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top"/>
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
 
+        <ComboBox Width="280" Grid.Row="1"
+                          Height="20"
+                          Margin="5,0,5,0"
+                          HorizontalAlignment="Left" 
+                          ItemsSource="{Binding Students}">
+            <!-- 테마 확인할것 -->
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding ID}"/>
+                        <TextBlock Text="-"/>
+                        <TextBlock Text="{Binding Name}"/>
+                        <TextBlock Text="-"/>
+                        <TextBlock Text="{Binding Age}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
         </Grid>
-    </Border>
 
+    </Border>
 </Window>
