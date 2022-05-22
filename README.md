@@ -78,7 +78,8 @@ Winform Vs WPF에 대한 말이 많지만
 <img src=https://user-images.githubusercontent.com/90036120/169240811-ba1d7080-e446-4be3-8f3a-0849b7892ebe.png width="600" height="300">     
         
         
-* 20/05/2022 검색 및 파일 정보 가져오기' 구현 중, Item 선택 시 item의 Artist, Title, Lyrics 정보를 가져 옴, 현재 ComBoBox, 검색 기능 테스트 중 입니다.
+* 20/05/2022 검색 및 파일 정보 가져오기' 구현 중, Item 선택 시 item의 Artist, Title, Lyrics 정보를 가져 옴, 현재 콤보박스, 검색 기능 테스트 중 입니다.
+* 21/05/22 콤보박스 바인딩 테스트 완료, 검색 기능 테스트 중
 
 ------------------
 깃허브를 개인적으로 사용 중이라 그동안 공유 => 업로드, 다운로드 보다는 편의성의 이미를 두었습니다.    
