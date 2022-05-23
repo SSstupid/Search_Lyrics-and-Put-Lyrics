@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Data;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,12 +14,13 @@ namespace ManageLyrics
         public List<LyricBasicInfo> LyricSearchList { get; set; }
         ALSongLyric Bus = new ALSongLyric();
 
-        public string? TestTextLyrics { get; set; }
+        public string? TextBoxLyrics { get; set; }
 
-        public int SelectedCount { get; set; }
-
-        public List<ListModel> SongList { get; set; }
+        public ObservableCollection<ListModel> SongList { get; set; }
         //ItemImage AlbumImg = new ItemImage();
+
+        public ListModel ListViewSelectedItem { get; set; }
+        public LyricBasicInfo ComboSelectedItem { get; set; }
 
         public string ResultCount { get; set; } = "Result :";
 
@@ -25,10 +28,13 @@ namespace ManageLyrics
 
         public ICommand PutTextCommand { get; set; }
 
+        public ICommand DeleteCommand { get; set; }
+
         public ListViewViewModel()
         {
             SearchCommand = new RelayParameterizedCommand(Search);
-            PutTextCommand = new RelayParameterizedCommand(async (parameter) => await PutText(parameter));
+            PutTextCommand = new RelayParameterizedCommand(PutText);
+            DeleteCommand = new RelayParameterizedCommand(DeleteItem);
         }
 
         private void Search(object parameter)
@@ -46,15 +52,34 @@ namespace ManageLyrics
             }
         }
 
-        private async Task PutText(object parameter)
+        private void PutText(object parameter)
         {
-            var file = TagLib.File.Create(SongList[SelectedCount].Path);
-            var ComboBoxLyric = (string)parameter;
-           
-
-            file.Tag.Lyrics = (string)parameter;
-            SongList[SelectedCount].Lyrics = (string)parameter;
-            file.Save();
+            var file = TagLib.File.Create(ListViewSelectedItem.Path);
+            if(string.IsNullOrWhiteSpace(TextBoxLyrics))
+            {
+                if (MessageBox.Show("do you want to put the lyrics", "Question", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+                {
+                    file.Tag.Lyrics = TextBoxLyrics;
+                    ListViewSelectedItem.Lyrics = TextBoxLyrics;
+                    file.Save();
+                }
+                else
+                {
+                    return ;
+                }
+            }
+        }
+        private void DeleteItem(object parameter)
+        {
+            if(ListViewSelectedItem != null)
+            {
+               // var abc = (ObservableCollection<ListView>)parameter;
+               /* foreach(ListModel i in abc)
+                {
+                    SongList.Remove(i);
+                }*/
+                SongList.Remove(ListViewSelectedItem);
+            }
         }
 
         public void ListDragEnter(object sender, DragEventArgs e)
@@ -69,11 +94,11 @@ namespace ManageLyrics
         /// <param name="e"></param>
         public void ListDrag(object sender, DragEventArgs e)
         {
-            List<ListModel> filesData = new();
+            ObservableCollection<ListModel> filesData = new();
 
             if(SongList != null)
             {
-                filesData.AddRange(SongList);
+                filesData = SongList;
             }
 
             string[] path = (string[])e.Data.GetData(DataFormats.FileDrop);
@@ -98,32 +123,34 @@ namespace ManageLyrics
         }
         public void ListSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            SelectedCount = (sender as ListView).SelectedIndex;
-            TestTextLyrics = SongList[SelectedCount].Lyrics;
+            if(ListSelectionChanged != null && ListViewSelectedItem != null)
+            {
+                try { TextBoxLyrics = ListViewSelectedItem.Lyrics; }
+                catch { }
+            }
         }
             
         public void ComboSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var LYListCombo = sender as ComboBox;
-            if (LyricSearchList.Count > 0)
+            if (ComboSelectedItem !=  null)
             {
-                LyricInfo LyricInfoSelected = Bus.GetLyricsFromID(LyricSearchList[LYListCombo.SelectedIndex].LyricID);
-                
-                TestTextLyrics = LyricInfoSelected.Lyric;
+                LyricInfo LyricInfoSelected = Bus.GetLyricsFromID(ComboSelectedItem.LyricID);
+
+                TextBoxLyrics = LyricInfoSelected.Lyric;
                 if (LyricInfoSelected != null)
                 {
                     
                     if (true)
                     {
                         string[] TimeRemove = LyricInfoSelected.Lyric.Split('\n');
-                        TestTextLyrics = null;
+                        TextBoxLyrics = null;
                         foreach (string NewText in TimeRemove)
                         {
                             if (NewText.Length > 9)
-                                TestTextLyrics += NewText.Substring(10) + "\n";
+                                TextBoxLyrics += NewText.Substring(10) + "\n";
                         }
                     }
-                    else TestTextLyrics = LyricInfoSelected.Lyric;
+                    else TextBoxLyrics = LyricInfoSelected.Lyric;
                 }
             }
         }

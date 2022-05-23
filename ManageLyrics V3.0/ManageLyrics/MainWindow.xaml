@@ -30,12 +30,13 @@
                 <Button Margin="5,0,0,0" Content="Mode Dark or Light" Cursor="Hand" />
             </StackPanel>
 
-            <ListView x:Name="TestView"
+            <ListView x:Name="SongListView"
                       Grid.Row="1"
                       Grid.Column="0"
                       Margin="5,5"
                       AllowDrop="True"
-                      ItemsSource="{Binding SongList}">
+                      ItemsSource="{Binding SongList , Mode=TwoWay}"
+                      SelectedItem="{Binding ListViewSelectedItem}" >
 
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="DragEnter">
@@ -58,7 +59,8 @@
                           Height="20"
                           Margin="5,0,5,0"
                           HorizontalAlignment="Left" 
-                          ItemsSource="{Binding LyricSearchList}">
+                          ItemsSource="{Binding LyricSearchList}" 
+                          SelectedItem="{Binding ComboSelectedItem}">
 
                     <i:Interaction.Triggers>
                         <i:EventTrigger EventName="SelectionChanged">
@@ -113,20 +115,20 @@
                         </StackPanel>
                         <StackPanel Grid.Column="1" Orientation="Horizontal" >
                             <Label Content="Artist : " />
-                            <TextBox x:Name="TBArtist" Text="{Binding ElementName=TestView, Path=SelectedItem.TextBoxArtist, Mode=OneWay}" />
+                            <TextBox x:Name="TBArtist" Text="{Binding ElementName=SongListView, Path=SelectedItem.TextBoxArtist, Mode=OneWay}" />
                         </StackPanel>
                         <StackPanel Grid.Column="2" Orientation="Horizontal"  >
                             <Label Content="Title : " />
-                            <TextBox x:Name="TBTitle" Text="{Binding ElementName=TestView, Path=SelectedItem.TextBoxTitle, Mode=OneWay}" />
+                            <TextBox x:Name="TBTitle" Text="{Binding ElementName=SongListView, Path=SelectedItem.TextBoxTitle, Mode=OneWay}" />
                         </StackPanel>
                     </Grid>
 
                     <Border>
                         <TextBox x:Name="TBLyirs" Style="{StaticResource TextLyrics}"
-                                 Text="{Binding TestTextLyrics}"
+                                 Text="{Binding TextBoxLyrics}"
                                  />
                                <!-- 
-                            Text="{Binding ElementName=TestView, Path=SelectedItem.Lyrics}" 
+                            Text="{Binding ElementName=SongListView, Path=SelectedItem.Lyrics}" 
                                 -->  
                     </Border>
 
@@ -140,12 +142,13 @@
                                 Content="{StaticResource FontAwesomeDeleteIcon}"
                                 Cursor="Hand"
                                 Style="{StaticResource ButtonIcon}"
-                                />
+                                Command="{Binding DeleteCommand}"
+                                CommandParameter="{Binding ElementName=SongListView, Path=SelectedItems}"/>
                         <Button Grid.Column="1"
                                 Content="{StaticResource FontAwesomeSaveIcon}"
                                 Style="{StaticResource ButtonIcon}"
                                 Command="{Binding PutTextCommand}"
-                                CommandParameter="{Binding Path=Text, ElementName=TBLyirs}" />
+                                CommandParameter="{Binding ElementName=TBLyirs, Path=Text }" />
                     </Grid>
                 </StackPanel>
             </Border>
