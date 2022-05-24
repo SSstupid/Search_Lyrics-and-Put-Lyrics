@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -16,13 +18,18 @@ namespace ManageLyrics
 
         public string? TextBoxLyrics { get; set; }
 
+        public string? TextBoxArtist { get; set; }
+
+        public string? TextBoxTitle { get; set; } 
+
+        public string ResultCount { get; set; } = "Result :";
+   
         public ObservableCollection<ListModel> SongList { get; set; }
         //ItemImage AlbumImg = new ItemImage();
 
         public ListModel ListViewSelectedItem { get; set; }
-        public LyricBasicInfo ComboSelectedItem { get; set; }
 
-        public string ResultCount { get; set; } = "Result :";
+        public LyricBasicInfo ComboSelectedItem { get; set; }
 
         public ICommand SearchCommand { get; set; }
 
@@ -33,7 +40,7 @@ namespace ManageLyrics
         public ListViewViewModel()
         {
             SearchCommand = new RelayParameterizedCommand(Search);
-            PutTextCommand = new RelayParameterizedCommand(PutText);
+            PutTextCommand = new RelayCommand(PutText);
             DeleteCommand = new RelayParameterizedCommand(DeleteItem);
         }
 
@@ -52,16 +59,21 @@ namespace ManageLyrics
             }
         }
 
-        private void PutText(object parameter)
+        private void PutText()
         {
-            var file = TagLib.File.Create(ListViewSelectedItem.Path);
-            if(string.IsNullOrWhiteSpace(TextBoxLyrics))
+            if(!string.IsNullOrWhiteSpace(TextBoxLyrics) && ListViewSelectedItem != null)
             {
                 if (MessageBox.Show("do you want to put the lyrics", "Question", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
                 {
+                    var file = TagLib.File.Create(ListViewSelectedItem.Path);
                     file.Tag.Lyrics = TextBoxLyrics;
-                    ListViewSelectedItem.Lyrics = TextBoxLyrics;
+                    file.Tag.Performers = new string[1] { TextBoxArtist };
+                    file.Tag.Title = TextBoxTitle;
                     file.Save();
+
+                    ListViewSelectedItem.TextBoxArtist = TextBoxArtist;
+                    ListViewSelectedItem.TextBoxTitle = TextBoxTitle;
+                    ListViewSelectedItem.Lyrics = TextBoxLyrics;
                 }
                 else
                 {
@@ -73,12 +85,13 @@ namespace ManageLyrics
         {
             if(ListViewSelectedItem != null)
             {
-               // var abc = (ObservableCollection<ListView>)parameter;
-               /* foreach(ListModel i in abc)
+                var IListItems = (IList)parameter;
+                var ListItems = IListItems.Cast<ListModel>().ToList();
+
+                foreach (var i in ListItems)
                 {
                     SongList.Remove(i);
-                }*/
-                SongList.Remove(ListViewSelectedItem);
+                }
             }
         }
 
@@ -125,7 +138,14 @@ namespace ManageLyrics
         {
             if(ListSelectionChanged != null && ListViewSelectedItem != null)
             {
-                try { TextBoxLyrics = ListViewSelectedItem.Lyrics; }
+                try 
+                { 
+                    TextBoxLyrics = ListViewSelectedItem.Lyrics; 
+                  
+                        TextBoxArtist = ListViewSelectedItem.TextBoxArtist; 
+                        TextBoxTitle = ListViewSelectedItem.TextBoxTitle; 
+
+                }
                 catch { }
             }
         }
@@ -135,7 +155,8 @@ namespace ManageLyrics
             if (ComboSelectedItem !=  null)
             {
                 LyricInfo LyricInfoSelected = Bus.GetLyricsFromID(ComboSelectedItem.LyricID);
-
+                TextBoxArtist = ComboSelectedItem.Artist;
+                TextBoxTitle = ComboSelectedItem.Title;
                 TextBoxLyrics = LyricInfoSelected.Lyric;
                 if (LyricInfoSelected != null)
                 {
@@ -154,8 +175,6 @@ namespace ManageLyrics
                 }
             }
         }
-
-
         #region Helpers
 
         /// <summary>

@@ -115,11 +115,17 @@
                         </StackPanel>
                         <StackPanel Grid.Column="1" Orientation="Horizontal" >
                             <Label Content="Artist : " />
-                            <TextBox x:Name="TBArtist" Text="{Binding ElementName=SongListView, Path=SelectedItem.TextBoxArtist, Mode=OneWay}" />
+                            <TextBox x:Name="TBArtist" Text="{Binding TextBoxArtist, Mode=TwoWay}" />
+                           <!-- 
+                            <TextBox x:Name="TBArtist" Text="{Binding ElementName=SongListView, Path=SelectedItem.TextBoxArtist, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" /> 
+                            -->
                         </StackPanel>
                         <StackPanel Grid.Column="2" Orientation="Horizontal"  >
                             <Label Content="Title : " />
-                            <TextBox x:Name="TBTitle" Text="{Binding ElementName=SongListView, Path=SelectedItem.TextBoxTitle, Mode=OneWay}" />
+                            <TextBox x:Name="TBTitle" Text="{Binding TextBoxTitle, Mode=TwoWay}" />
+                           <!-- 
+                            <TextBox x:Name="TBTitle" Text="{Binding ElementName=SongListView, Path=SelectedItem.TextBoxTitle, Mode=TwoWay}" />
+                            --> 
                         </StackPanel>
                     </Grid>
 
