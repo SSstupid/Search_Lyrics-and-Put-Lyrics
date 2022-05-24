@@ -83,7 +83,7 @@ Winform Vs WPF에 대한 말이 많지만
 * 22/05/22 저장 버튼 클릭 시TextBox.Text를 파일에 저장, 콤보 박스 아이템 선택 시 가사를 가져옴, 정보를 입력 후 버튼 클릭시 검색(검색 기능)    
 * 23/05/22 검색에 필요한 대부분의 기능 구현 완료 --> item 추가 및 삭제, 검색, 저장 등 구현 완료 ( 프로토 타입완성 )
            버그 픽스 : ListView에 아이템 추가, 가사 검색 등 동작 시 Throw되는 현상 수정
-           ViewModel에 View에 관련된 요소 일부 제거 --> ListView, ComboBox의 SelectedItem 바인딩으로 해결
+           ViewModel의 View 관련된 요소 일부 제거 --> ListView, ComboBox의 SelectedItem 바인딩으로 해결
 * 24/05/22 일부 (Throw)버그 수정, ListView 아이템 다중 삭제 기능 추가.     
            (Artist)(Title)TextBox 바인딩 변경 --> ComboBox 아이템 클릭시 Text(Artist, Title, Lyrics) 출력 됨, 저장 클릭 시 가사, 가수, 제목 같이 저장 됨.
            
