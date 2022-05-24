@@ -84,9 +84,10 @@ Winform Vs WPF에 대한 말이 많지만
 * 23/05/22 검색에 필요한 대부분의 기능 구현 완료 --> item 추가 및 삭제, 검색, 저장 등 구현 완료 ( 프로토 타입완성 )
            버그 픽스 : ListView에 아이템 추가, 가사 검색 등 동작 시 Throw되는 현상 수정
            ViewModel에 View에 관련된 요소 일부 제거 --> ListView, ComboBox의 SelectedItem 바인딩으로 해결
+* 24/05/22 일부 (Throw)버그 수정, ListView 아이템 다중 삭제 기능 추가.     
+           (Artist)(Title)TextBox 바인딩 변경 --> ComboBox 아이템 클릭시 Text(Artist, Title, Lyrics) 출력 됨, 저장 클릭 시 가사, 가수, 제목 같이 저장 됨.
            
-           
-과제 : RelayCommand에 대한 이해, 코드 규칙에 맞게 수정, TextBox 바인딩 변경, 메모리누수, 버그로 튕김, 시간 없애기 옵션으로 넣기,테마 모드 설정 기능, Help --> gif로 동작 보여주기, 아이템 멀티 삭제 기능
+과제 : RelayCommand에 대한 이해, 코드 규칙에 맞게 수정, 메모리누수, 버그로 튕김, 시간 없애기 옵션으로 넣기, 테마 모드 설정 기능, Help --> gif로 동작 보여주기,
 
 
 ------------------
