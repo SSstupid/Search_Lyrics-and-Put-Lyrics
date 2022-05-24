@@ -86,7 +86,7 @@ Winform Vs WPF에 대한 말이 많지만
            ViewModel에 View에 관련된 요소 일부 제거 --> ListView, ComboBox의 SelectedItem 바인딩으로 해결
            
            
-           과제 : RelayCommand에 대한 이해, 코드 규칙에 맞게 수정, TextBox 바인딩 변경, 메모리누수, 버그로 튕김, 시간 없애기 옵션으로 넣기,테마 모드 설정 기능, Help --> gif로 동작 보여주기, 아이템 멀티 삭제 기능
+과제 : RelayCommand에 대한 이해, 코드 규칙에 맞게 수정, TextBox 바인딩 변경, 메모리누수, 버그로 튕김, 시간 없애기 옵션으로 넣기,테마 모드 설정 기능, Help --> gif로 동작 보여주기, 아이템 멀티 삭제 기능
 
 
 ------------------
