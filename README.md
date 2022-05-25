@@ -78,16 +78,22 @@ Winform Vs WPF에 대한 말이 많지만
 <img src=https://user-images.githubusercontent.com/90036120/169240811-ba1d7080-e446-4be3-8f3a-0849b7892ebe.png width="600" height="300">     
         
         
-* 20/05/2022 검색 및 파일 정보 가져오기' 구현 중, Item 선택 시 item의 Artist, Title, Lyrics 정보를 가져 옴, 현재 콤보박스, 검색 기능 테스트 중 입니다.
-* 21/05/22 콤보박스 바인딩 테스트 완료 --> 콤보 박스 아이템 추가 성공 , 검색 기능 테스트 중
-* 22/05/22 저장 버튼 클릭 시TextBox.Text를 파일에 저장, 콤보 박스 아이템 선택 시 가사를 가져옴, 정보를 입력 후 버튼 클릭시 검색(검색 기능)    
-* 23/05/22 검색에 필요한 대부분의 기능 구현 완료 --> item 추가 및 삭제, 검색, 저장 등 구현 완료 ( 프로토 타입완성 )
-           버그 픽스 : ListView에 아이템 추가, 가사 검색 등 동작 시 Throw되는 현상 수정
-           ViewModel의 View 관련된 요소 일부 제거 --> ListView, ComboBox의 SelectedItem 바인딩으로 해결
-* 24/05/22 일부 (Throw)버그 수정, ListView 아이템 다중 삭제 기능 추가.     
-           (Artist)(Title)TextBox 바인딩 변경 --> ComboBox 아이템 클릭시 Text(Artist, Title, Lyrics) 출력 됨, 저장 클릭 시 가사, 가수, 제목 같이 저장 됨.
+* 20/05/2022 검색 및 파일 정보 가져오기' 구현 중, Item 선택 시 item의 Artist, Title, Lyrics 정보를 가져 옴, 현재 콤보박스, 검색 기능 테스트 중 입니다.   
+* 21/05/22 콤보박스 바인딩 테스트 완료 --> 콤보 박스 아이템 추가 성공 , 검색 기능 테스트 중    
+* 22/05/22 저장 버튼 클릭 시TextBox.Text를 파일에 저장, 콤보 박스 아이템 선택 시 가사를 가져옴, 정보를 입력 후 버튼 클릭시 검색(검색 기능)      
+* 23/05/22 검색에 필요한 대부분의 기능 구현 완료 --> item 추가 및 삭제, 검색, 저장 등 구현 완료 ( 프로토 타입완성 )       
+       버그 픽스 : ListView에 아이템 추가, 가사 검색 등 동작 시 Throw되는 현상 수정   
+       ViewModel의 View 관련된 요소 일부 제거 --> ListView, ComboBox의 SelectedItem 바인딩으로 해결   
+* 24/05/22 일부 (Throw)버그 수정, ListView 아이템 다중 삭제 기능 추가.       
+       (Artist)(Title)TextBox 바인딩 변경 --> ComboBox 아이템 클릭시 Text(Artist, Title, Lyrics) 출력 됨,     
+       저장 클릭 시 가사, 가수, 제목 같이 저장 됨.   
+* 25/05/22 View의 일부 StackPaenel을 Grid로 변환 --> 가사 출력 부 TextBox가 윈도우 크기에 따라 반응 함.       
+       테마 버튼 구현 --> 버튼 클릭 시 Dark, Light 테마로 전환 됨.
+<img src=https://user-images.githubusercontent.com/90036120/170242136-bf50e025-84a9-4b92-ae5e-a21eb282aea6.gif width="600" height="300">  
+
            
-과제 : RelayCommand에 대한 이해, 코드 규칙에 맞게 수정, 메모리누수, 버그로 튕김, 시간 없애기 옵션으로 넣기, 테마 모드 설정 기능, Help --> gif로 동작 보여주기,
+           
+과제 : RelayCommand에 대한 이해, 코드 규칙에 맞게 수정, 메모리누수, 버그로 튕김, TimeStamp 옵션으로 넣기, Help --> gif로 동작 보여주기, ListViewViewModel 로직 분할 하기(Ioc 이용), Contact 버튼 구현
 
 
 ------------------
