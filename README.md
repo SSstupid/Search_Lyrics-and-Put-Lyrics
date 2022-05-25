@@ -93,7 +93,7 @@ Winform Vs WPF에 대한 말이 많지만
 
            
            
-과제 : RelayCommand에 대한 이해, 코드 규칙에 맞게 수정, 메모리누수, 버그로 튕김, TimeStamp 옵션으로 넣기, Help --> gif로 동작 보여주기, ListViewViewModel 로직 분할 하기(Ioc 이용), Contact 버튼 구현
+과제 : RelayCommand에 대한 이해, 코드 규칙에 맞게 수정, 메모리누수, 버그로 튕김, TimeStamp 옵션으로 넣기, Help --> gif로 동작 보여주기, ListViewViewModel 로직 분할 하기(Ioc 이용), Contact 버튼 구현, 주석 달기
 
 
 ------------------
