@@ -23,6 +23,8 @@ namespace ManageLyrics
         public string? TextBoxTitle { get; set; } 
 
         public string ResultCount { get; set; } = "Result :";
+
+        public string CurrentMode { get; set; } = "Light";
    
         public ObservableCollection<ListModel> SongList { get; set; }
         //ItemImage AlbumImg = new ItemImage();
@@ -30,6 +32,7 @@ namespace ManageLyrics
         public ListModel ListViewSelectedItem { get; set; }
 
         public LyricBasicInfo ComboSelectedItem { get; set; }
+        public bool IsSetMode = true;
 
         public ICommand SearchCommand { get; set; }
 
@@ -37,11 +40,16 @@ namespace ManageLyrics
 
         public ICommand DeleteCommand { get; set; }
 
+        public ICommand ModeCommand { get; set; }
+
+        public ResourceDictionary Light = new ResourceDictionary { Source = new Uri(@"/ManageLyrics;component/Themes/LightTheme.xaml", UriKind.Relative) };
+        public ResourceDictionary ToolBox = new ResourceDictionary { Source = new Uri(@"/ManageLyrics;component/Style/ToolBox.xaml", UriKind.Relative) };
         public ListViewViewModel()
         {
             SearchCommand = new RelayParameterizedCommand(Search);
-            PutTextCommand = new RelayCommand(PutText);
             DeleteCommand = new RelayParameterizedCommand(DeleteItem);
+            PutTextCommand = new RelayCommand(PutText);
+            ModeCommand = new RelayCommand(ModeChange);
         }
 
         private void Search(object parameter)
@@ -56,6 +64,19 @@ namespace ManageLyrics
             catch
             {
                 return;
+            }
+        }
+        private void DeleteItem(object parameter)
+        {
+            if(ListViewSelectedItem != null)
+            {
+                var IListItems = (IList)parameter;
+                var ListItems = IListItems.Cast<ListModel>().ToList();
+
+                foreach (var i in ListItems)
+                {
+                    SongList.Remove(i);
+                }
             }
         }
 
@@ -81,17 +102,22 @@ namespace ManageLyrics
                 }
             }
         }
-        private void DeleteItem(object parameter)
-        {
-            if(ListViewSelectedItem != null)
-            {
-                var IListItems = (IList)parameter;
-                var ListItems = IListItems.Cast<ListModel>().ToList();
 
-                foreach (var i in ListItems)
-                {
-                    SongList.Remove(i);
-                }
+        private void ModeChange()
+        {
+            if (IsSetMode)
+            {
+                App.Current.Resources.MergedDictionaries.Add(Light);
+                App.Current.Resources.MergedDictionaries.Add(ToolBox);
+                CurrentMode = "Dark";
+                IsSetMode = false;
+            }
+            else if (!IsSetMode)
+            {
+                App.Current.Resources.MergedDictionaries.Remove(ToolBox);
+                App.Current.Resources.MergedDictionaries.Remove(Light);
+                CurrentMode = "Light";
+                IsSetMode = true;
             }
         }
 
@@ -144,7 +170,6 @@ namespace ManageLyrics
                   
                         TextBoxArtist = ListViewSelectedItem.TextBoxArtist; 
                         TextBoxTitle = ListViewSelectedItem.TextBoxTitle; 
-
                 }
                 catch { }
             }

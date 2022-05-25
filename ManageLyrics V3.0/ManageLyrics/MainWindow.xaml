@@ -12,8 +12,8 @@
         Height="465"
         Style="{DynamicResource CustomWindowStyle}"
         WindowStartupLocation="CenterScreen"
-        mc:Ignorable="d">
-    
+        mc:Ignorable="d" >
+
     <Border Margin="5,5">
         <Grid>
             <Grid.RowDefinitions>
@@ -25,15 +25,19 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <StackPanel Grid.Row="0" Orientation="Horizontal" >
                 <Button Content="Contact" />
-                <Button Margin="5,0,0,0" Content="Mode Dark or Light" Cursor="Hand" />
+                <Button Margin="5,0,0,0" 
+                        Width="45" 
+                        Cursor="Hand" 
+                        Content="{Binding CurrentMode, FallbackValue=Light}" 
+                        Command="{Binding ModeCommand}"/>
             </StackPanel>
 
             <ListView x:Name="SongListView"
                       Grid.Row="1"
                       Grid.Column="0"
-                      Margin="5,5"
+                      Margin="0,5"
                       AllowDrop="True"
                       ItemsSource="{Binding SongList , Mode=TwoWay}"
                       SelectedItem="{Binding ListViewSelectedItem}" >
@@ -97,66 +101,71 @@
 
             <Border Grid.Row="1"
                     Grid.Column="1"
-                    Margin="5,5"
-                    BorderBrush="{StaticResource ControlSelectedMouseOverBorderBrush}"
+                    Margin="5, 5, 0, 5"
+                    BorderBrush="{DynamicResource ControlSelectedMouseOverBorderBrush}"
                     BorderThickness="0.5">
-                
-                <StackPanel>
-                    <Grid>
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="26" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Grid.Column="0"  >
+                                <Label 
+                                   Content="{Binding ResultCount, FallbackValue=Result :}" />
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Orientation="Horizontal" >
+                                <Label Content="Artist : " />
+                                <TextBox x:Name="TBArtist" Text="{Binding TextBoxArtist, Mode=TwoWay}" Width="104" />
+                                <!-- 
+                                <TextBox x:Name="TBArtist" Text="{Binding ElementName=SongListView, Path=SelectedItem.TextBoxArtist, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" /> 
+                                -->
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Orientation="Horizontal" >
+                                <Label Content="Title : " />
+                                <TextBox x:Name="TBTitle" Text="{Binding TextBoxTitle, Mode=TwoWay}"/>
+                                <!-- 
+                                <TextBox x:Name="TBTitle" Text="{Binding ElementName=SongListView, Path=SelectedItem.TextBoxTitle, Mode=TwoWay}" />
+                                -->
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+
+                    <Grid Grid.Row="1">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="70" />
+                        </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="80" />
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="*" />
                         </Grid.ColumnDefinitions>
 
-                        <StackPanel  Grid.Column="0" Orientation="Horizontal" >
-                            <Label 
-                               Content="{Binding ResultCount, FallbackValue=Result :}" />
-                        </StackPanel>
-                        <StackPanel Grid.Column="1" Orientation="Horizontal" >
-                            <Label Content="Artist : " />
-                            <TextBox x:Name="TBArtist" Text="{Binding TextBoxArtist, Mode=TwoWay}" />
-                           <!-- 
-                            <TextBox x:Name="TBArtist" Text="{Binding ElementName=SongListView, Path=SelectedItem.TextBoxArtist, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" /> 
-                            -->
-                        </StackPanel>
-                        <StackPanel Grid.Column="2" Orientation="Horizontal"  >
-                            <Label Content="Title : " />
-                            <TextBox x:Name="TBTitle" Text="{Binding TextBoxTitle, Mode=TwoWay}" />
-                           <!-- 
-                            <TextBox x:Name="TBTitle" Text="{Binding ElementName=SongListView, Path=SelectedItem.TextBoxTitle, Mode=TwoWay}" />
-                            --> 
-                        </StackPanel>
+                        <TextBox Grid.ColumnSpan="2" x:Name="TBLyirs" Style="{DynamicResource TextLyrics}"
+                                     Text="{Binding TextBoxLyrics}"  Height="Auto"/>
+                        <!-- 
+                                Text="{Binding ElementName=SongListView, Path=SelectedItem.Lyrics}" />
+                                    -->
+                        <Button Grid.Row="1" Grid.Column="0"
+                                    Content="{StaticResource FontAwesomeDeleteIcon}"
+                                    Cursor="Hand"
+                                    Style="{DynamicResource ButtonIcon}"
+                                    Command="{Binding DeleteCommand}"
+                                    CommandParameter="{Binding ElementName=SongListView, Path=SelectedItems}"/>
+                        <Button Grid.Row="1" Grid.Column="1"
+                                    Content="{StaticResource FontAwesomeSaveIcon}"
+                                    Style="{DynamicResource ButtonIcon}"
+                                    Command="{Binding PutTextCommand}"
+                                    CommandParameter="{Binding ElementName=TBLyirs, Path=Text }" Cursor="Hand" />
                     </Grid>
-
-                    <Border>
-                        <TextBox x:Name="TBLyirs" Style="{StaticResource TextLyrics}"
-                                 Text="{Binding TextBoxLyrics}"
-                                 />
-                               <!-- 
-                            Text="{Binding ElementName=SongListView, Path=SelectedItem.Lyrics}" 
-                                -->  
-                    </Border>
-
-                    <Grid Margin="0,10,0,10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-
-                        <Button Grid.Column="0"
-                                Content="{StaticResource FontAwesomeDeleteIcon}"
-                                Cursor="Hand"
-                                Style="{StaticResource ButtonIcon}"
-                                Command="{Binding DeleteCommand}"
-                                CommandParameter="{Binding ElementName=SongListView, Path=SelectedItems}"/>
-                        <Button Grid.Column="1"
-                                Content="{StaticResource FontAwesomeSaveIcon}"
-                                Style="{StaticResource ButtonIcon}"
-                                Command="{Binding PutTextCommand}"
-                                CommandParameter="{Binding ElementName=TBLyirs, Path=Text }" />
-                    </Grid>
-                </StackPanel>
+                </Grid>
             </Border>
         </Grid>
     </Border>

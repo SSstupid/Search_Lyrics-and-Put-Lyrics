@@ -1,5 +1,5 @@
 ﻿<ResourceDictionary
-    x:Class="REghZyFramework.Themes.DarkTheme"
+    x:Class="ManageLyrics.DarkTheme"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2">
@@ -82,7 +82,7 @@
     <!--  Controls all in Order in toolbox  -->
 
     <!--  Button  -->
-    <Style x:Key="DarkButton" TargetType="{x:Type Button}">
+    <Style x:Key="ThemesButton" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
         <Setter Property="Background" Value="{StaticResource ControlDefaultBackground}" />
         <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}" />
@@ -2003,7 +2003,7 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="DarkListViewItem" TargetType="{x:Type ListViewItem}">
+    <Style x:Key="ThemesListViewItem" TargetType="{x:Type ListViewItem}">
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="Padding" Value="4,1" />
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
@@ -4576,7 +4576,7 @@
     <!--  -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-  -->
 
     <!--  Textbox  -->
-    <Style x:Key="DarkTextBox" TargetType="{x:Type TextBox}">
+    <Style x:Key="ThemesTextBox" TargetType="{x:Type TextBox}">
         <Setter Property="Background" Value="{StaticResource ContainerBackground}" />
         <Setter Property="BorderBrush" Value="{StaticResource ControlDefaultBorderBrush}" />
         <Setter Property="Foreground" Value="{StaticResource ControlDefaultForeground}" />
