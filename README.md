@@ -60,7 +60,7 @@ WPF로 전환중입니다.
 Winform Vs WPF에 대한 말이 많지만    
 혼자 개발하고 있는 저에게 와닿는 WPF장점은 'GUI를 만들때 Winform보다 간편하다' 입니다.   
 조금 더 깔끔한 GUI를 만들고 (동일한 기능구현) 성능비교에 중점을 두겠습니다.   
-<img src=https://user-images.githubusercontent.com/90036120/168419610-414e26d9-e756-44f9-ba55-3eca4965f889.png width="600" height="380"/>       
+ <img src=https://user-images.githubusercontent.com/90036120/168419610-414e26d9-e756-44f9-ba55-3eca4965f889.png width="600" height="380"/>       
 * 14/05/2022 초기 디자인 완료         
 * 14/05/2022 ListView -dragdrop 구현완료.          
     현재 이미지컨버터 구현중 (파일앨범에 저장된 사진을 받을 예정, 이미지가 없을 시 윈도우 기본 이미지 사용 )       
@@ -75,7 +75,7 @@ Winform Vs WPF에 대한 말이 많지만
 * 19/05/2022 ListView Template (디자인)변경 => 가수, 노래제목 표시, 앨범 이미지를 TagLib를 이용하여 바로 가져오는 것이 아닌
   Converter를 통해 String Path에서 이미지로 변환 후 받아옴, 앨범 이미지가 없을 시 윈도우 기본 아이콘을 가져옴.       
            
-<img src=https://user-images.githubusercontent.com/90036120/169240811-ba1d7080-e446-4be3-8f3a-0849b7892ebe.png width="600" height="300">     
+  <img src=https://user-images.githubusercontent.com/90036120/169240811-ba1d7080-e446-4be3-8f3a-0849b7892ebe.png width="600" height="300">     
         
         
 * 20/05/2022 검색 및 파일 정보 가져오기' 구현 중, Item 선택 시 item의 Artist, Title, Lyrics 정보를 가져 옴, 현재 콤보박스, 검색 기능 테스트 중 입니다.   
@@ -90,7 +90,7 @@ Winform Vs WPF에 대한 말이 많지만
 * 25/05/22 View의 일부 StackPaenel을 Grid로 변환 => 가사 출력 부 TextBox가 윈도우 크기에 따라 반응 함.       
        테마 버튼 구현 --> 버튼 클릭 시 Dark, Light 테마로 전환 됨.    
 
-<img src=https://user-images.githubusercontent.com/90036120/170242136-bf50e025-84a9-4b92-ae5e-a21eb282aea6.gif width="600" height="300">      
+   <img src=https://user-images.githubusercontent.com/90036120/170242136-bf50e025-84a9-4b92-ae5e-a21eb282aea6.gif width="600" height="300">      
 
 * 26/05/22 **테마 관련 업데이트**
   * 테마원본 유지,    
