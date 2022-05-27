@@ -100,7 +100,7 @@ Winform Vs WPF에 대한 말이 많지만
  테마 전환 기능은 View에 해당하는 것으로 기존 ViewModel에서 사용 할시 MVVM에 위반되는 것을 확인했습니다.     
  테마 관련된 .CS를 분리하고 IoC, Ninject를 활용하여 사용했습니다. => [링크](https://forum.dotnetdev.kr/t/wpf/3677/6)          
            
-과제 : RelayCommand에 대한 이해, 코드 규칙에 맞게 수정, 메모리누수, 버그로 튕김, TimeStamp 옵션으로 넣기, Help --> gif로 동작 보여주기, ListViewViewModel 로직 분할 하기(Ioc 이용), Contact 버튼 구현, 주석 달기
+과제 : RelayCommand 이해, 코드 규칙에 맞게 수정, 메모리누수, 버그로 튕김, TimeStamp 옵션으로 넣기, Help --> gif로 동작 보여주기, ListViewViewModel 로직 분할 하기, Contact 버튼 구현, 주석 달기, IoC 이해, 
 
 
 ------------------
