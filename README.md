@@ -88,10 +88,17 @@ Winform Vs WPF에 대한 말이 많지만
        (Artist)(Title)TextBox 바인딩 변경 --> ComboBox 아이템 클릭시 Text(Artist, Title, Lyrics) 출력 됨,     
        저장 클릭 시 가사, 가수, 제목 같이 저장 됨.   
 * 25/05/22 View의 일부 StackPaenel을 Grid로 변환 --> 가사 출력 부 TextBox가 윈도우 크기에 따라 반응 함.       
-       테마 버튼 구현 --> 버튼 클릭 시 Dark, Light 테마로 전환 됨.
-<img src=https://user-images.githubusercontent.com/90036120/170242136-bf50e025-84a9-4b92-ae5e-a21eb282aea6.gif width="600" height="300">  
+       테마 버튼 구현 --> 버튼 클릭 시 Dark, Light 테마로 전환 됨.    
 
-           
+<img src=https://user-images.githubusercontent.com/90036120/170242136-bf50e025-84a9-4b92-ae5e-a21eb282aea6.gif width="600" height="300">      
+
+* 26/05/22 **테마 관련 업데이트**
+  * 테마원본 유지,    
+  * 테마 ViewModel 분리   
+ 이전엔 필요한 컨트롤 Style을 테마에서 x:Key을 설정하고 받아왔습니다.    
+ 현재 x:Key를 삭제(테마 원본 유지), 필요한 컨트롤 타입을 상속 받아 Style을 지정합니다. --> [링크](https://forum.dotnetdev.kr/t/resource-style/3681/7)     
+ 테마 전환 기능은 View에 해당하는 것으로 기존 ViewModel에서 사용 할시 MVVM에 위반되는 것을 확인했습니다.     
+ 테마 관련된 .CS를 분리하고 IoC, Ninject를 활용하여 사용했습니다. --> [링크](https://forum.dotnetdev.kr/t/wpf/3677/6)          
            
 과제 : RelayCommand에 대한 이해, 코드 규칙에 맞게 수정, 메모리누수, 버그로 튕김, TimeStamp 옵션으로 넣기, Help --> gif로 동작 보여주기, ListViewViewModel 로직 분할 하기(Ioc 이용), Contact 버튼 구현, 주석 달기
 
