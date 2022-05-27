@@ -31,7 +31,8 @@
                         Width="45" 
                         Cursor="Hand" 
                         Content="{Binding ChangeMode, FallbackValue=Light}" 
-                        Command="{Binding ModeCommand}"/>
+                        Command="{Binding ThemesViewModel.ModeCommand,
+                                     Source={x:Static local:ViewModelLocator.Instance}}"/>
             </StackPanel>
 
             <ListView x:Name="SongListView"

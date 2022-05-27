@@ -9,18 +9,21 @@
         <ResourceDictionary Source="Fonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <Style TargetType="{x:Type Label}" >
+
+    <Style TargetType="{x:Type Label}" BasedOn="{StaticResource {x:Type Label}}">
         <Setter Property="FontSize" Value="12" />
     </Style>
 
-    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource DarkTextBox}">
+    <Style x:Key="ThemesTextBox" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}" />
+
+    <Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource ThemesTextBox}">
         <Setter Property="FontSize" Value="12" />
         <Setter Property="HorizontalContentAlignment" Value="Left" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
         <Setter Property="Width" Value="110" />
     </Style>
 
-    <Style x:Key="TextLyrics" TargetType="{x:Type TextBox}" BasedOn="{StaticResource DarkTextBox}" >
+    <Style x:Key="TextLyrics" TargetType="{x:Type TextBox}" BasedOn="{StaticResource ThemesTextBox}" >
         <Setter Property="Height" Value="305" />
         <Setter Property="AcceptsReturn" Value="True" />
         <Setter Property="AcceptsTab" Value="True" />
@@ -28,11 +31,7 @@
         <Setter Property="VerticalContentAlignment" Value="Top" />
     </Style>
 
-
-
-    <Style TargetType="{x:Type Button}" BasedOn="{StaticResource DarkButton}" />
-
-    <Style TargetType="{x:Type ListViewItem}" BasedOn="{StaticResource DarkListViewItem}" >
+    <Style TargetType="{x:Type ListViewItem}" BasedOn="{StaticResource {x:Type ListViewItem}}" >
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListViewItem}">
@@ -110,11 +109,13 @@
         </Setter>
     </Style>
 
-    <Style x:Key="ButtonIcon" TargetType="{x:Type Button}" BasedOn="{StaticResource DarkButton}" >
+    <Style x:Key="ThemesButton" TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}" />
+    
+    <Style x:Key="ButtonIcon" TargetType="{x:Type Button}" BasedOn="{StaticResource ThemesButton}" >
         <Setter Property="FontSize" Value="{StaticResource FontSizeRegular}" />
         <Setter Property="FontFamily" Value="{StaticResource FontAwesome}" />
         <Setter Property="Height" Value="40" />
         <Setter Property="Width" Value="80" />
-    </Style> 
+    </Style>
 
 </ResourceDictionary>
