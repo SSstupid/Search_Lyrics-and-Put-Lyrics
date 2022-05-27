@@ -59,8 +59,8 @@ Https로 요청해서 가사를 받아오고 가사 목록이 콤보박스에 �
 WPF로 전환중입니다.   
 Winform Vs WPF에 대한 말이 많지만    
 혼자 개발하고 있는 저에게 와닿는 WPF장점은 'GUI를 만들때 Winform보다 간편하다' 입니다.   
-조금 더 깔끔한 GUI를 만들고 (동일한 기능구현) 성능비교에 중점을 두겠습니다.   
- <img src=https://user-images.githubusercontent.com/90036120/168419610-414e26d9-e756-44f9-ba55-3eca4965f889.png width="600" height="380"/>       
+조금 더 깔끔한 GUI를 만들고 (동일한 기능구현) 성능비교에 중점을 두겠습니다.     
+      <img src=https://user-images.githubusercontent.com/90036120/168419610-414e26d9-e756-44f9-ba55-3eca4965f889.png width="600" height="380"/>       
 * 14/05/2022 초기 디자인 완료         
 * 14/05/2022 ListView -dragdrop 구현완료.          
     현재 이미지컨버터 구현중 (파일앨범에 저장된 사진을 받을 예정, 이미지가 없을 시 윈도우 기본 이미지 사용 )       
@@ -100,6 +100,11 @@ Winform Vs WPF에 대한 말이 많지만
  테마 전환 기능은 View에 해당하는 것으로 기존 ViewModel에서 사용 할시 MVVM에 위반되는 것을 확인했습니다.     
  테마 관련된 .CS를 분리하고 IoC, Ninject를 활용하여 사용했습니다. => [링크](https://forum.dotnetdev.kr/t/wpf/3677/6)          
            
+* 27/05/22 **MesaageBoxService 및 Contact 버튼 업데이트**       
+   *  Contact 버튼 =>Contact를 IoC와 MessageBoxSerivce.cs로 구현, Window로 바꿀예정     
+   * 기존에 있는 MessageBox를 MessageBoxService로 구현 --> View 모델 요소 제거 중    
+
+
 과제 : RelayCommand 이해, 코드 규칙에 맞게 수정, 메모리누수, 버그로 튕김, TimeStamp 옵션으로 넣기, Help --> gif로 동작 보여주기, ListViewViewModel 로직 분할 하기, Contact 버튼 구현, 주석 달기, IoC 이해, 
 
 
