@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows;
 
-namespace REghZyFramework.Themes
+namespace ManageLyrics
 {
     public static class ThemesController
     {

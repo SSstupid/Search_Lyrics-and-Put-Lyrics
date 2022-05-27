@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace REghZyFramework.Themes
+namespace ManageLyrics
 {
     public partial class ColourfulLightTheme
     {

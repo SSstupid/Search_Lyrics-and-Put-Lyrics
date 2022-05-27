@@ -30,9 +30,14 @@ public static class IoC
     /// </summary>
     private static void BindViewModels()
     {
-        // Bind to a Double instance of Application view model
+        // Bind to a single instance of ThemesViewModel view model
         Kernel.Bind<ThemesViewModel>().ToConstant(new ThemesViewModel());
+
+        // Bind to a single instance of ALSongLyric view model
         Kernel.Bind<ALSongLyric>().ToConstant(new ALSongLyric());
+
+        // Bind to a single instance of MessageBoxService view model
+        Kernel.Bind<MessageBoxService>().ToConstant(new MessageBoxService());
     }
 
     #endregion

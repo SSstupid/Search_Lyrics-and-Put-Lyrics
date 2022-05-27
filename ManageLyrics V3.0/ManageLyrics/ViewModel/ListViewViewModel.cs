@@ -7,6 +7,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+
 namespace ManageLyrics;
 
 public class ListViewViewModel : BaseViewModel
@@ -43,6 +44,7 @@ public class ListViewViewModel : BaseViewModel
     public ICommand DeleteCommand { get; set; }
 
     public ICommand ModeCommand { get; set; }
+    public ICommand ContactCommand { get; set; }
 
     #endregion
 
@@ -54,9 +56,12 @@ public class ListViewViewModel : BaseViewModel
         DeleteCommand = new RelayParameterizedCommand(DeleteItem);
         PutTextCommand = new RelayCommand(PutText);
         ModeCommand = new RelayCommand(ThemeModeChange);
+        ContactCommand = new RelayCommand(ContactShow);
     }
 
     #endregion
+
+    #region Command
 
     private void Search(object parameter)
     {
@@ -91,7 +96,7 @@ public class ListViewViewModel : BaseViewModel
     {
         if(!string.IsNullOrWhiteSpace(TextBoxLyrics) && ListViewSelectedItem != null)
         {
-            if (MessageBox.Show("do you want to put the lyrics", "Question", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
+            if (IoC.Get<MessageBoxService>().Show("do you want to put the lyrics", "Question", MessageBoxButton.YesNo) == MessageBoxResult.Yes)
             {
                 var file = TagLib.File.Create(ListViewSelectedItem.Path);
                 file.Tag.Lyrics = TextBoxLyrics;
@@ -125,6 +130,13 @@ public class ListViewViewModel : BaseViewModel
             ChangeMode = "Dark";
         }
     }
+
+    private void ContactShow()
+    {
+        IoC.Get<MessageBoxService>().Show("GitHub : https://github.com/SSstupid\nEmail : rlawoghks3@gmail.com", "Contact", MessageBoxButton.OK);
+    }
+
+    #endregion
 
     public void ListDragEnter(object sender, DragEventArgs e)
     {
@@ -228,17 +240,17 @@ public class ListViewViewModel : BaseViewModel
                 else
                 {
                     LyricSearchList = null;
-                    MessageBox.Show("No results.");
+                    IoC.Get<MessageBoxService>().Show("No results.", "Error", MessageBoxButton.OK);
                 }
             }
             else
             {
-                MessageBox.Show("Please enter the artist and the title.");
+                IoC.Get<MessageBoxService>().Show("Please enter the artist and the title.", "Error", MessageBoxButton.OK);
             }
         }
         catch
         {
-            MessageBox.Show("failed: Check it again and try it.");
+            IoC.Get<MessageBoxService>().Show("failed: Check it again and try it.", "Error", MessageBoxButton.OK);
         }
     }
 
