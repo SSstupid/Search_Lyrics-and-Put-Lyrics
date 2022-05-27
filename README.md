@@ -101,7 +101,7 @@ Winform Vs WPF에 대한 말이 많지만
  테마 관련된 .CS를 분리하고 IoC, Ninject를 활용하여 사용했습니다. => [링크](https://forum.dotnetdev.kr/t/wpf/3677/6)          
            
 * 27/05/22 **MesaageBoxService 및 Contact 버튼 업데이트**       
-   *  Contact 버튼 =>Contact를 IoC와 MessageBoxSerivce.cs로 구현, Window로 바꿀예정     
+   *  Contact 버튼 =>Contact를 IoC와 MessageBoxSerivce.cs로 구현, Window로 바꿀예정     
    * 기존에 있는 MessageBox를 MessageBoxService로 구현 --> View 모델 요소 제거 중    
 
 
