@@ -7,12 +7,15 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Contact.xaml.cs">
+    <Compile Update="WindowViews\Contact.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="WindowViews\VideoHeler.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Contact.xaml">
+    <Page Update="WindowViews\Contact.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\LightTheme.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="WindowViews\VideoHeler.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

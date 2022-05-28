@@ -33,11 +33,18 @@ public static class IoC
         // Bind to a single instance of ThemesViewModel view model
         Kernel.Bind<ThemesViewModel>().ToConstant(new ThemesViewModel());
 
-        // Bind to a single instance of ALSongLyric view model
+        // Bind to a single instance of ALSongLyric Logic
         Kernel.Bind<ALSongLyric>().ToConstant(new ALSongLyric());
 
         // Bind to a single instance of MessageBoxService view model
         Kernel.Bind<MessageBoxService>().ToConstant(new MessageBoxService());
+
+        // Bind to a single instance of open ContactService
+        Kernel.Bind<ContactService>().ToConstant(new ContactService());
+
+        // Bind to a single instance of open HelpService
+        Kernel.Bind<HelpService>().ToConstant(new HelpService());
+
     }
 
     #endregion

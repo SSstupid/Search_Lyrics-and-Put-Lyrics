@@ -27,7 +27,7 @@
 
             <StackPanel Grid.Row="0" Orientation="Horizontal" >
                 <Button Content="Contact" Command="{Binding ContactCommand}"/>
-                <Button Content="Help" Margin="5,0,5,0" />
+                <Button Content="Help" Command="{Binding HelpCommand}" Margin="5,0,5,0" />
                 <Button Width="45" 
                         Cursor="Hand" 
                         Content="{Binding ChangeMode, FallbackValue=Light}" 

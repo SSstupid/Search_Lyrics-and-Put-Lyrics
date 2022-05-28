@@ -53,7 +53,7 @@ namespace ManageLyrics {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ManageLyrics;V1.0.0.0;component/themes/lighttheme.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ManageLyrics;component/themes/lighttheme.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Themes\LightTheme.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

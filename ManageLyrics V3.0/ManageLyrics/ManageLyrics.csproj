@@ -10,6 +10,15 @@
   <ItemGroup>
     <None Remove="Fonts\fontawesome-webfont.svg" />
     <None Remove="Fonts\fontawesome-webfont.ttf" />
+    <None Remove="Images\gffdsfssfd.gif" />
+    <None Remove="Images\HelperVideo.gif" />
+    <None Remove="Images\HelperVideo.mp4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\HelperVideo.mp4">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -19,6 +28,7 @@
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
     <PackageReference Include="System.Windows.Interactivity.WPF" Version="2.0.20525" />
     <PackageReference Include="TagLibSharp" Version="2.2.0" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
   </ItemGroup>
 
   <ItemGroup>

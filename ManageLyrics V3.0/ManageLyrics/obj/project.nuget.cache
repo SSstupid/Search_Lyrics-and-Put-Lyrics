@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HiSvtNrilZWlyBM3A8c3fQ7zm3qzeSSkxiDFX2zB4EGaO5XsZs6ZXp6SdUVvM1w+R4wweixDyNkfwDCMOIkBeA==",
+  "dgSpecHash": "+D7Ou2cTusFArNugPF4bxTzX83IFNQ3ShABVYVeobDK1vzWsTT5+Rgoapfwl9c4Vo5koarZlWEsbaQJmmGHrzA==",
   "success": true,
   "projectFilePath": "C:\\Users\\rlawo\\source\\repos\\ManageLyrics\\ManageLyrics\\ManageLyrics.csproj",
   "expectedPackageFiles": [
@@ -22,7 +22,8 @@
     "C:\\Users\\rlawo\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\rlawo\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\rlawo\\.nuget\\packages\\system.windows.interactivity.wpf\\2.0.20525\\system.windows.interactivity.wpf.2.0.20525.nupkg.sha512",
-    "C:\\Users\\rlawo\\.nuget\\packages\\taglibsharp\\2.2.0\\taglibsharp.2.2.0.nupkg.sha512"
+    "C:\\Users\\rlawo\\.nuget\\packages\\taglibsharp\\2.2.0\\taglibsharp.2.2.0.nupkg.sha512",
+    "C:\\Users\\rlawo\\.nuget\\packages\\wpfanimatedgif\\2.0.2\\wpfanimatedgif.2.0.2.nupkg.sha512"
   ],
   "logs": [
     {
