@@ -30,12 +30,13 @@ Transfer Winforms to WPF
 * 📁 ViewServices
 
 =============
+
 ============
 
 
 # ManageLyricsV3.0
 C# Winforms에서 WPF로 전환 되었습니다.    
- * 22.05.29 가사 검색 및 저장을 위한 필수 기능이 대부분 구현완료.
+ * 22.05.29 가사 검색 및 저장을 위한 필수 기능이 대부분 구현완료.      
 가사를 검색하고 저장 할 수 있습니다.     
 <img src=https://user-images.githubusercontent.com/90036120/170856925-2d82537e-2998-42fa-937f-a4381c91112a.png width="750" height="420"/> 
 
