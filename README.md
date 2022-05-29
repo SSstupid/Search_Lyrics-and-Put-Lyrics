@@ -103,12 +103,13 @@ Winform Vs WPF에 대한 말이 많지만
 * 27/05/22 **MesaageBoxService 및 Contact 버튼 업데이트**     
   * Contact 버튼 =>Contact를 IoC와 MessageBoxSerivce.cs로 구현, Window로 바꿀예정     
   * 기존에 있는 MessageBox를 MessageBoxService로 구현 --> View 모델 요소 제거 중    
-
 * 28/05/22 **Contact 변경 및 Help 버튼 구현**
   * Contact => MessageBox에서 interface를 이용하여 Window 창으로 변경 => 하이퍼링크 추가 됨
-  * Help => 동작 영상을 실행 함. 사용 가이드 영상(영상을 보고 어떻게 사용하는지 알 수 있슴.) 참조 : [링크](https://forum.dotnetdev.kr/t/wpf-gif-15/3690)
-
-과제 : RelayCommand 이해, 코드 규칙에 맞게 수정, 메모리누수, 버그로 튕김, TimeStamp 옵션으로 넣기, Help --> gif로 동작 보여주기, ListViewViewModel 로직 분할 하기, Contact 버튼 구현, 주석 달기, IoC 이해, 
+  * Help => 동작 영상을 실행 함. 사용 가이드 영상(영상을 보고 어떻게 사용하는지 알 수 있슴.) => [링크](https://forum.dotnetdev.kr/t/wpf-gif-15/3690)  
+* 29/05/22 **코드 주석 및 포맷팅 진행**
+  * 코드에 주석 추가, 코드 정렬 진행      
+  
+과제 : RelayCommand 이해, 코드 규칙에 맞게 수정, 메모리누수, 버그로 튕김, TimeStamp 옵션으로 넣기, ListViewViewModel 로직 분할 하기, IoC 이해, Core분리
 
 
 ------------------
