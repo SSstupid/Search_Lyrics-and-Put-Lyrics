@@ -3,7 +3,7 @@ Transfer Winforms to WPF
  * 29.05.22 Most of the essential features for searching and storing lyrics have been implemented.  
  You can search for and save lyrics.    
 <img src=https://user-images.githubusercontent.com/90036120/170856925-2d82537e-2998-42fa-937f-a4381c91112a.png width="750" height="420"/> 
-**Now** V3.0 WPF  
+(Now) V3.0 WPF  
 
 <br />
 
@@ -11,7 +11,7 @@ Transfer Winforms to WPF
 
 
 <img src=https://user-images.githubusercontent.com/90036120/170858072-29fe05d4-3fd4-421c-800c-ee73f9e67c94.jpg width="750" height="420"/> 
-Before V2.0 Winfroms
+(Before) V2.0 Winfroms
 
 ## Contents
 - [development environment](#development-environment)
@@ -56,7 +56,7 @@ C# Winforms에서 WPF로 전환 되었습니다.
  * 22.05.29 가사 검색 및 저장을 위한 필수 기능이 대부분 구현완료.      
 가사를 검색하고 저장 할 수 있습니다.     
 <img src=https://user-images.githubusercontent.com/90036120/170856925-2d82537e-2998-42fa-937f-a4381c91112a.png width="750" height="420"/> 
-**현재** V3.0 WPF  
+(현재) V3.0 WPF  
 
 <br />
 
@@ -64,7 +64,7 @@ C# Winforms에서 WPF로 전환 되었습니다.
 
 
 <img src=https://user-images.githubusercontent.com/90036120/170858072-29fe05d4-3fd4-421c-800c-ee73f9e67c94.jpg width="750" height="420"/> 
-이전 V2.0 Winfroms
+(이전) V2.0 Winfroms
 
 
 ## 목차
