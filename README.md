@@ -29,10 +29,10 @@ Transfer Winforms to WPF
 * 📁 ViewModels
 * 📁 ViewServices
 
-=============
 
-============
+---------------
 
+# **한글**
 
 # ManageLyricsV3.0
 C# Winforms에서 WPF로 전환 되었습니다.    
