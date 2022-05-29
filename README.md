@@ -69,7 +69,7 @@ C# Winforms에서 WPF로 전환 되었습니다.
 
 ## 목차
 - [개발 정보](#개발-정보)
-- [Nuget Package.](#Nuget-Package.)
+- [Nuget Package1](#Nuget-Package1)
 - [프로젝트 구조](#프로젝트-구조)
 - [차이점](#차이점)
 
@@ -79,7 +79,7 @@ C# Winforms에서 WPF로 전환 되었습니다.
 * [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/)
 <br />
 
-# Nuget Package.
+# Nuget Package1
 * Ninject
 * PropertyChanged.Fody
 * System.Drawing.Common
