@@ -1,7 +1,7 @@
 ﻿namespace ManageLyrics;
 
 /// <summary>
-/// A window of Theme
+/// A window of Themes
 /// </summary>
 public enum ThemesMode
 {

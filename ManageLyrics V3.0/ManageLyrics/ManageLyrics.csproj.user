@@ -10,7 +10,7 @@
     <Compile Update="WindowViews\Contact.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="WindowViews\VideoHeler.xaml.cs">
+    <Compile Update="WindowViews\VideoHelper.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -24,13 +24,7 @@
     <Page Update="Style\ToolBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Style\Colors.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Style\Fonts.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Style\ListViews.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\ColourfulDarkTheme.xaml">
@@ -45,7 +39,7 @@
     <Page Update="Themes\LightTheme.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="WindowViews\VideoHeler.xaml">
+    <Page Update="WindowViews\VideoHelper.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

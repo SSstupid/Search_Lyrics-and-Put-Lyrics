@@ -7,8 +7,15 @@ using System.Globalization;
 using System.Windows.Media.Imaging;
 
 namespace ManageLyrics;
+
+/// <summary>
+/// A converter it get images from album and window icon
+/// </summary>
 public class ItemImageConvert : IValueConverter
 {
+    /// <summary>
+    /// Singleton instance of the Converter
+    /// </summary>
     public static ItemImageConvert Instance = new ItemImageConvert();
 
     public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -31,7 +38,10 @@ public class ItemImageConvert : IValueConverter
     {
         ImageSource imageSource;
 
-        try { TagLib.File tagFile = TagLib.File.Create(filename); if (tagFile.Tag.Pictures.Length == 0) { imageSource = GetIcon(filename); }
+        try 
+        { 
+            TagLib.File tagFile = TagLib.File.Create(filename); 
+            if (tagFile.Tag.Pictures.Length == 0) { imageSource = GetIcon(filename); }
             else { imageSource = GetAlbumImage(filename, tagFile); }
         }
         catch { imageSource = null; }   

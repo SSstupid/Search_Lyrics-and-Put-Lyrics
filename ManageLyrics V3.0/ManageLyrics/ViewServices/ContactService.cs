@@ -1,6 +1,4 @@
-﻿using System.Windows;
-
-namespace ManageLyrics;
+﻿namespace ManageLyrics;
 
 /// <summary>
 /// Service of open window
@@ -14,7 +12,7 @@ public class ContactService : IWindowService
         win.Show();
     }
 
-    // open window with datacontent(viewmodel)
+    // open window with data content(viewmodel)
     public void ShowWindow(object viewModel)
     {
         var win = new Contact();

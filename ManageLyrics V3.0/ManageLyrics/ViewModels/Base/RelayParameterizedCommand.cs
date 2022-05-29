@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace ManageLyrics
+namespace ManageLyrics;
+
+/// <summary>
+/// A basic command that runs an Action
+/// </summary>
+class RelayParameterizedCommand : ICommand
 {
-    /// <summary>
-    /// A basic command that runs an Action
-    /// </summary>
-    class RelayParameterizedCommand : ICommand
-    {
-        #region Private Members
+    #region Private Members
 
         /// <summary>
         /// The action to run
@@ -17,7 +17,7 @@ namespace ManageLyrics
 
         #endregion
 
-        #region Public Events
+    #region Public Events
 
         /// <summary>
         /// The event thats fired when the <see cref="CanExecute(object)"/> value has changed
@@ -26,7 +26,7 @@ namespace ManageLyrics
 
         #endregion
 
-        #region Constuctor
+    #region Constuctor
 
         /// <summary>
         /// Default contructor
@@ -39,7 +39,7 @@ namespace ManageLyrics
 
         #endregion
 
-        #region Command Methods
+    #region Command Methods
 
         /// <summary>
         /// A relay command can always execute
@@ -61,5 +61,4 @@ namespace ManageLyrics
         }
 
         #endregion
-    }
 }

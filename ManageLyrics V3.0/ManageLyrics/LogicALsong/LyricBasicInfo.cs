@@ -1,5 +1,8 @@
 ﻿namespace ManageLyrics;
 
+/// <summary>
+/// List information for request lyric detail
+/// </summary>
 public class LyricBasicInfo
 {
     public int LyricID { get; set; }
@@ -8,8 +11,10 @@ public class LyricBasicInfo
     public string Album { get; set; }
 
 }
-#region No using this code
 
+/// <summary>
+/// lyric detail properties
+/// </summary>
 public class LyricInfo : LyricBasicInfo
 {
     public int StatusID;
@@ -26,5 +31,3 @@ public class LyricInfo : LyricBasicInfo
     public string ModifierPhone;
     public string ModifierComment;
 }
-
-#endregion

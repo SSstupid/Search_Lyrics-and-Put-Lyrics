@@ -38,12 +38,9 @@ C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\bin\Debug\net6.0-windows\T
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\bin\Debug\net6.0-windows\Ninject.dll
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\WindowViews\Contact.baml
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\WindowViews\Contact.g.cs
-C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\WindowViews\VideoHeler.g.cs
-C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\WindowViews\VideoHeler.baml
-C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\Style\Colors.baml
-C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\Style\ListViews.baml
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\Style\Fonts.baml
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\Style\ToolBox.baml
-C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\bin\Debug\net6.0-windows\WpfAnimatedGif.dll
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\bin\Debug\net6.0-windows\Images\HelperVideo.mp4
 C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\ManageLyrics_Content.g.cs
+C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\WindowViews\VideoHelper.baml
+C:\Users\rlawo\source\repos\ManageLyrics\ManageLyrics\obj\Debug\net6.0-windows\WindowViews\VideoHelper.g.cs

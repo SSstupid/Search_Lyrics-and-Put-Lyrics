@@ -2,6 +2,9 @@
 
 namespace ManageLyrics;
 
+/// <summary>
+/// The messagebox show class
+/// </summary>
 public class MessageBoxService : IMessageBox
 {
     public MessageBoxResult Show(string messageBoxText, string caption, MessageBoxButton button)

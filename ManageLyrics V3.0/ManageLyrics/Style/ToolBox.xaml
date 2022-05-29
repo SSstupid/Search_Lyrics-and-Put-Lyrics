@@ -4,8 +4,6 @@
     xmlns:local="clr-namespace:ManageLyrics">
 
     <ResourceDictionary.MergedDictionaries>
-        <!--  x:Key="IconButton"  order is imfortant  -->
-        <ResourceDictionary Source="Colors.xaml" />
         <ResourceDictionary Source="Fonts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 

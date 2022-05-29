@@ -167,8 +167,13 @@ public class ListViewViewModel : BaseViewModel
 
     #endregion
 
-    #region Events of ListView, ComboBox
+    #region Events of listview, combobox
 
+    /// <summary>
+    /// Listview drag enter event
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     public void ListDragEnter(object sender, DragEventArgs e)
     {
         e.Effects = DragDropEffects.Copy;
@@ -176,7 +181,7 @@ public class ListViewViewModel : BaseViewModel
 
 
     /// <summary>
-    /// dragdrop event for add item in listview
+    /// dragdrop event for add listview item
     /// </summary>
     /// <param name="sender"></param>
     /// <param name="e"></param>
@@ -210,6 +215,11 @@ public class ListViewViewModel : BaseViewModel
         SongList = filesData;
     }
 
+    /// <summary>
+    /// Gets text of listviewitem information when item selection changed
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     public void ListSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         if(ListSelectionChanged != null && ListViewSelectedItem != null)
@@ -217,19 +227,23 @@ public class ListViewViewModel : BaseViewModel
             try 
             { 
                 TextBoxLyrics = ListViewSelectedItem.Lyrics; 
-                  
-                    TextBoxArtist = ListViewSelectedItem.TextBoxArtist; 
-                    TextBoxTitle = ListViewSelectedItem.TextBoxTitle; 
+                TextBoxArtist = ListViewSelectedItem.TextBoxArtist; 
+                TextBoxTitle = ListViewSelectedItem.TextBoxTitle; 
             }
             catch { }
         }
     }
-            
+
+    /// <summary>
+    /// Gets text of comboboxitem information when item selection changed
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     public void ComboSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
         if (ComboSelectedItem !=  null)
         {
-            LyricInfo LyricInfoSelected = IoC.Get<ALSongLyric>().GetLyricsFromID(ComboSelectedItem.LyricID);
+            LyricInfo LyricInfoSelected = IoC.Get<ALSongLyric>().GetLyricFromID(ComboSelectedItem.LyricID);
             TextBoxArtist = ComboSelectedItem.Artist;
             TextBoxTitle = ComboSelectedItem.Title;
             TextBoxLyrics = LyricInfoSelected.Lyric;
@@ -254,7 +268,7 @@ public class ListViewViewModel : BaseViewModel
     #endregion
 
     /// <summary>
-    /// Find the Lyrics
+    /// Search the Lyrics
     /// </summary>
     /// <param name="Artist"></param>
     /// <param name="Title"></param>
