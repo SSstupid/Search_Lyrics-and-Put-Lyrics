@@ -17,7 +17,7 @@ Transfer Winforms to WPF
 - [development environment](#development-environment)
 - [Nuget Package](#Nuget-Package)
 - [Project Structure](#Project-Structure)
-- [What is the difference between the new version?](#What-is-the-difference-between-the-new-version?)
+- [What is the difference between the new version](#What-is-the-difference-between-the-new-version)
 
 # development environment
 * .NET 6.0
@@ -39,7 +39,7 @@ Transfer Winforms to WPF
 * 📁 ViewModels
 * 📁 ViewServices
 
-# What is the difference between the new version?
+# What is the difference between the new version
 <img src=https://user-images.githubusercontent.com/90036120/170858265-381dda92-d57f-415b-86a3-d99acf31786d.png width="350" height="140"/> &nbsp; <img src=https://user-images.githubusercontent.com/90036120/170858297-53def5c5-8e98-4e46-a083-5bdbf7130207.png width="350" height="140"/>     
 WPF(104MB) memory is higher than Winfroms(20MB) (It diff 5x)    
 Operating speed : I think Winfroms is little bit faster But almost same   
@@ -69,7 +69,7 @@ C# Winforms에서 WPF로 전환 되었습니다.
 
 ## 목차
 - [개발 정보](#개발-정보)
-- [Nuget Package](#Nuget-Package)
+- [Nuget Package](#Nuget-Package.)
 - [프로젝트 구조](#프로젝트-구조)
 - [차이점](#차이점)
 
@@ -79,7 +79,7 @@ C# Winforms에서 WPF로 전환 되었습니다.
 * [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/)
 <br />
 
-# Nuget Package
+# Nuget Package.
 * Ninject
 * PropertyChanged.Fody
 * System.Drawing.Common
