@@ -20,7 +20,7 @@ Transfer Winforms to WPF
 - [What is the difference between the new version](#What-is-the-difference-between-the-new-version)
 
 # development environment
-* .NET 6.0
+* ![NET6](https://img.shields.io/badge/.NET-6.0-red)
 * C# 10.0
 * [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/)
 <br />
