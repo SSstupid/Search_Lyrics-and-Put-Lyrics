@@ -27,7 +27,8 @@ public class ItemImageConvert : IValueConverter
     {
         throw new NotImplementedException();
     }
-    #region Funtion of GetImage
+
+    #region Function of Get Image
 
     /// <summary>
     /// Get listviewitem image
@@ -46,28 +47,7 @@ public class ItemImageConvert : IValueConverter
         }
         catch { imageSource = null; }   
 
-        // Album is null ?
-
         return imageSource;
-    }
-
-    /// <summary>
-    /// Get Image from Album
-    /// </summary>
-    /// <param name="filename"></param>
-    /// <param name="TagFile"></param>
-    /// <returns></returns>
-    public ImageSource GetAlbumImage(string filename, TagLib.File TagFile)
-    {
-        var BitImage = new BitmapImage();
-
-        //Get memory Data from file then covert to bitmapimage
-        MemoryStream ms = new MemoryStream(TagFile.Tag.Pictures[0].Data.Data);
-        BitImage.BeginInit();
-        BitImage.StreamSource = ms;
-        BitImage.EndInit();
-
-        return BitImage;
     }
 
     /// <summary>
@@ -78,8 +58,13 @@ public class ItemImageConvert : IValueConverter
     public ImageSource GetIcon(string filename)
     {
         ImageSource icon;
+
+        // Returns an icon representation of an image that is contained in the specified file.
+        // Icon need this "System.Drawing.Common" nuget-package
         using (Icon sysicon = Icon.ExtractAssociatedIcon(filename))
         {
+            // Returns a managed BitmapSource, based on the provided pointer to an unmanaged icon image.
+            // "CreateBitmapSourceFromHIcon" Method is from Windows Desktop
             icon = System.Windows.Interop.Imaging.CreateBitmapSourceFromHIcon(
                         sysicon.Handle,
                         System.Windows.Int32Rect.Empty,
@@ -87,5 +72,25 @@ public class ItemImageConvert : IValueConverter
         }
         return icon;
     }
+    /// <summary>
+    /// Get Image from album
+    /// Get memory data from file than convert to bitmapimage
+    /// </summary>
+    /// <param name="filename"></param>
+    /// <param name="TagFile"></param>
+    /// <returns></returns>
+    public ImageSource GetAlbumImage(string filename, TagLib.File TagFile)
+    {
+        var BitImage = new BitmapImage();
+
+        // Creates a stream whose backing store is memory.
+        MemoryStream ms = new MemoryStream(TagFile.Tag.Pictures[0].Data.Data);
+        BitImage.BeginInit();
+        BitImage.StreamSource = ms;
+        BitImage.EndInit();
+
+        return BitImage;
+    }
+
     #endregion
 }
