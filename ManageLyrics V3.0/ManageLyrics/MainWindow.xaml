@@ -59,7 +59,7 @@
                         Grid.Column="1"
                         VerticalAlignment="Top"
                         Orientation="Horizontal">
-                <ComboBox Width="280"
+                <ComboBox Width="335"
                           Height="20"
                           Margin="5,0,5,0"
                           HorizontalAlignment="Left" 
@@ -84,12 +84,13 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
 
-                <Button Width="80"
+                <Button Width="50"
                         Height="20"
                         Content="&#xf002;"
                         Cursor="Hand"
                         FontFamily="{StaticResource FontAwesome}"
-                        Command="{Binding SearchCommand}">
+                        Command="{Binding SearchCommand}"
+                        ToolTip="Search" ToolTipService.ShowDuration="3000">
                     <Button.CommandParameter>
                         <MultiBinding Converter="{x:Static local:MultiValueConvert.Instance}">
                             <Binding Path="Text" ElementName="TBArtist"/>
@@ -158,12 +159,23 @@
                                     Cursor="Hand"
                                     Style="{DynamicResource ButtonIcon}"
                                     Command="{Binding DeleteCommand}"
-                                    CommandParameter="{Binding ElementName=SongListView, Path=SelectedItems}"/>
+                                    CommandParameter="{Binding ElementName=SongListView, Path=SelectedItems}"
+                                    ToolTipService.ShowDuration="3000" >
+                            <ToolTipService.ToolTip>
+                                <TextBlock FontSize="12" Text="Delete"/>
+                            </ToolTipService.ToolTip>
+                        </Button>
+
                         <Button Grid.Row="1" Grid.Column="1"
                                     Content="{StaticResource FontAwesomeSaveIcon}"
                                     Style="{DynamicResource ButtonIcon}"
                                     Command="{Binding PutTextCommand}"
-                                    CommandParameter="{Binding ElementName=TBLyirs, Path=Text }" Cursor="Hand" />
+                                    CommandParameter="{Binding ElementName=TBLyirs, Path=Text }" Cursor="Hand"
+                                    ToolTipService.ShowDuration="3000" >
+                            <ToolTipService.ToolTip>
+                                <TextBlock FontSize="12" Text="Save"/>
+                            </ToolTipService.ToolTip>
+                        </Button>
                     </Grid>
                 </Grid>
             </Border>
